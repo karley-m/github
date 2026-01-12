@@ -9,14 +9,16 @@ body {
 }
 
 
-#container {
-    min-width:900px;
+#container1 {
+    max-width:900px;
+    margin-left:-45px;
+    
 }
 
 header h1 {
     font-size:35px;
     position:absolute;
-    margin-left:220px;
+    margin-left:200px;
     color: #FFF;
 
 }
@@ -24,31 +26,28 @@ header h1 {
 #chat {
     position:absolute;
     margin-right:40px;
-    margin-left:-30px;
+    margin-left:-40px;
     margin-top:-10px;
 }
 
 #leo {
     position:absolute;
     padding-top:-40px;
-    margin-top:30px;
-    margin-left:40px;
-    margin-bottom:-40px;
-    
-    
+    margin-top:45px;
+    margin-left:30px;
 }
 
 #banner {
     position:absolute;
     margin-bottom:30px;
     padding-top:60px;
-    padding-left:15px;
+    margin-left:-30px;
     
 }
 
 .starOne {
     position:absolute;
-    margin-left:-140px;
+    margin-left:-200px;
     transition: rotate 2s ease;
 }
 
@@ -59,8 +58,8 @@ header h1 {
 
 .starTwo {
     position:absolute;
-    margin-left:-170px;
-    margin-top:100px;
+    margin-left:-210px;
+    margin-top:130px;
     transition: rotate 2s ease;
 }
 
@@ -71,7 +70,7 @@ header h1 {
 
 .starThree {
     position:absolute;
-    margin-left:-40px;
+    margin-left:-80px;
     margin-top:120px;
     transition: rotate 1s ease;
 }
@@ -83,7 +82,7 @@ header h1 {
 
 .starFour {
     position:absolute;
-    margin-left:800px;
+    margin-left:680px;
     transition: rotate 2s ease;
 }
 
@@ -94,8 +93,8 @@ header h1 {
 
 .starFive {
     position:absolute;
-    margin-left:700px;
-    margin-top:50px;
+    margin-left:620px;
+    margin-top:110px;
     transition:rotate 1s ease;
 }
 
@@ -106,7 +105,7 @@ header h1 {
 
 .starSix {
     position:absolute;
-    margin-left:820px;
+    margin-left:750px;
     margin-top:130px;
     transition: rotate 1s ease;
 }
@@ -142,6 +141,7 @@ header h2 {
     font-weight: 400;
     line-height: 25px;
     padding-top:5px;
+    margin-left:-10px;
     
 }
 
@@ -189,7 +189,7 @@ main ul li a:hover {
 }
 
 .container2 .one {
-    margin-left:-20px;
+    margin-left:-70px;
 }
 
 .container2 .one h2 {
@@ -234,10 +234,8 @@ main ul {
 
 main h2 {
     color: #FFF;
-    /* margin-left:40px; */
     margin-top:60px;
     padding-left:10px;
-    /* width:120px; */
 }
 
 main img {
@@ -246,7 +244,7 @@ main img {
     width:800px;
     height:400px;
     margin-top:200px;
-    margin-left:-50px;
+    margin-left:-100px;
 }
 
 footer {
@@ -257,9 +255,39 @@ footer {
     margin-top:20px;
 }
 
+footer p {
+    margin-left:-80px;
+}
+
+.flower {
+    position:absolute;
+    background: url(images/flower.png) no-repeat center/contain;
+    width:180px;
+    height:180px;
+    margin-top:-60px;
+    padding-left:320px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+        
+    }
+    to {
+        transform: rotate(360deg);
+        
+    }
+}
+
+
 address {
     margin-top:17px;
-    margin-left:400px;
+    margin-left:370px;
 }
 
 address a {
