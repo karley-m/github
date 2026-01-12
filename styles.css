@@ -1,3 +1,266 @@
+html {
+    background-image: url("images/vintage-wallpaper.jpg");
+}
+
+body {
+    margin:auto;
+    margin-left:350px;
+    margin-top:30px;
+}
+
+
 #container {
     min-width:900px;
 }
+
+header h1 {
+    font-size:35px;
+    position:absolute;
+    margin-left:220px;
+    color: #FFF;
+
+}
+
+#chat {
+    position:absolute;
+    margin-right:40px;
+    margin-left:-30px;
+    margin-top:-10px;
+}
+
+#leo {
+    position:absolute;
+    padding-top:-40px;
+    margin-top:30px;
+    margin-left:40px;
+    margin-bottom:-40px;
+    
+    
+}
+
+#banner {
+    position:absolute;
+    margin-bottom:30px;
+    padding-top:60px;
+    padding-left:15px;
+    
+}
+
+.starOne {
+    position:absolute;
+    margin-left:-200px;
+    transition: rotate 2s ease;
+}
+
+.starOne:hover {
+    rotate:180deg;
+}
+
+.starTwo {
+    position:absolute;
+    margin-left:-250px;
+    margin-top:90px;
+    transition: rotate 2s ease;
+}
+
+.starTwo:hover {
+    rotate:-180deg;
+}
+
+.starThree {
+    position:absolute;
+    margin-left:-100px;
+    margin-top:60px;
+    transition: rotate 1s ease;
+}
+
+.starThree:hover {
+    rotate:180deg;
+}
+
+.starFour {
+    position:absolute;
+    margin-left:800px;
+    transition: rotate 2s ease;
+}
+
+.starFour:hover {
+    rotate:-180deg;
+}
+
+.starFive {
+    position:absolute;
+    margin-left:700px;
+    margin-top:50px;
+    transition:rotate 1s ease;
+}
+
+.starFive:hover {
+    rotate:180deg;
+}
+
+.starSix {
+    position:absolute;
+    margin-left:900px;
+    margin-top:100px;
+    transition: rotate 1s ease;
+}
+
+.starSix:hover {
+    rotate:200deg;
+}
+
+
+.font-one {
+    font-family: "Faculty Glyphic";
+    font-size: 41px;
+    font-weight: 400;
+    margin-left:-130px;
+}
+
+.font-two {
+    font-family: "Londrina Sketch";
+    font-weight: 400;
+    font-size: 48px;
+    margin-left:230px;
+
+}
+
+header h2 {
+    position:absolute;
+    
+    color:navy;
+    font-family: "Frutiger LT Std";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    padding-top:8px;
+    
+}
+
+section h2 {
+    font-family: "Faculty Glyphic";
+}
+
+main h2 {
+    font-size: 26px;
+}
+
+main ul {
+    color: #FFF;
+    font-family: "Frutiger LT Std";
+    font-weight: 400;
+    list-style-type:none;
+    
+}
+
+main ul li a{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 500ms ease;
+    position:relative;
+    line-height:20px;
+    transform: scale 1s ease;
+    
+}
+
+main ul li a:hover {
+    color:rgb(97, 255, 184);
+    font-size:18px;
+    line-height:20px;
+    position:relative;
+}
+
+.container2 {
+    display:flex;
+    flex:1;
+    position:absolute;
+    z-index:2;
+    margin-top:200px;
+}
+
+.container2 .one {
+    margin-left:-10px;
+}
+
+.container2 .one h2 {
+    margin-left:35px;
+}
+
+.container2 .two {
+   margin-left:-10px;
+}
+
+.container2 .two h2 {
+    margin-left:35px;
+}
+
+.container2 .three {
+    width:150px;
+    margin-left:10px;
+}
+
+.container2 .three h2 {
+    margin-left:17px;
+    width:200px;
+}
+
+.container2 .four {
+    margin-left:35px;
+}
+
+.container2 .four h2 {
+    margin-left:30px;
+}
+
+main li {
+    padding-top:20px;
+    width:120px;
+
+}
+
+main ul {
+    width:140px;
+}
+
+main h2 {
+    color: #FFF;
+    /* margin-left:40px; */
+    margin-top:60px;
+    padding-left:10px;
+    /* width:120px; */
+}
+
+main img {
+    position:relative;
+    z-index:1;
+    width:800px;
+    height:400px;
+    margin-top:200px;
+    margin-left:-40px;
+}
+
+footer {
+    font-family: "Faculty Glyphic";
+    color:#FFF;
+    display:flex;
+    flex:1;
+    margin-top:20px;
+}
+
+address {
+    margin-top:17px;
+    margin-left:400px;
+}
+
+address a {
+    color:#FFF
+}
+
+
+
+
+
+
