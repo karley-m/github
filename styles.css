@@ -48,34 +48,37 @@ header h1 {
 
 .starOne {
     position:absolute;
-    margin-left:-200px;
+    margin-left:-140px;
     transition: rotate 2s ease;
 }
 
 .starOne:hover {
     rotate:180deg;
+    cursor: pointer;
 }
 
 .starTwo {
     position:absolute;
-    margin-left:-250px;
-    margin-top:90px;
+    margin-left:-170px;
+    margin-top:100px;
     transition: rotate 2s ease;
 }
 
 .starTwo:hover {
     rotate:-180deg;
+    cursor: pointer;
 }
 
 .starThree {
     position:absolute;
-    margin-left:-100px;
-    margin-top:60px;
+    margin-left:-40px;
+    margin-top:120px;
     transition: rotate 1s ease;
 }
 
 .starThree:hover {
     rotate:180deg;
+    cursor: pointer;
 }
 
 .starFour {
@@ -86,6 +89,7 @@ header h1 {
 
 .starFour:hover {
     rotate:-180deg;
+    cursor: pointer;
 }
 
 .starFive {
@@ -97,17 +101,19 @@ header h1 {
 
 .starFive:hover {
     rotate:180deg;
+    cursor: pointer;
 }
 
 .starSix {
     position:absolute;
-    margin-left:900px;
-    margin-top:100px;
+    margin-left:820px;
+    margin-top:130px;
     transition: rotate 1s ease;
 }
 
 .starSix:hover {
     rotate:200deg;
+    cursor: pointer;
 }
 
 
@@ -130,12 +136,12 @@ header h2 {
     position:absolute;
     
     color:navy;
-    font-family: "Frutiger LT Std";
-    font-size: 24px;
+    font-family: "Faculty Glyphic";
+    font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: 25px;
-    padding-top:8px;
+    padding-top:5px;
     
 }
 
@@ -149,7 +155,7 @@ main h2 {
 
 main ul {
     color: #FFF;
-    font-family: "Frutiger LT Std";
+    font-family: "Faculty Glyphic";
     font-weight: 400;
     list-style-type:none;
     
@@ -179,10 +185,11 @@ main ul li a:hover {
     position:absolute;
     z-index:2;
     margin-top:200px;
+    
 }
 
 .container2 .one {
-    margin-left:-10px;
+    margin-left:-20px;
 }
 
 .container2 .one h2 {
@@ -239,7 +246,7 @@ main img {
     width:800px;
     height:400px;
     margin-top:200px;
-    margin-left:-40px;
+    margin-left:-50px;
 }
 
 footer {
