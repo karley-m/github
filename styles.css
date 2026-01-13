@@ -18,28 +18,28 @@ body {
 header h1 {
     font-size:35px;
     position:absolute;
-    margin-left:200px;
+    margin-left:270px;
     color: #FFF;
 }
 
 #chat {
     position:absolute;
     margin-right:40px;
-    margin-left:-40px;
+    margin-left:-10px;
     margin-top:-10px;
 }
 
 #leo {
     position:absolute;
     margin-top:45px;
-    margin-left:30px;
+    margin-left:70px;
 }
 
 #banner {
     position:absolute;
     margin-bottom:30px;
     padding-top:60px;
-    margin-left:-30px;
+    margin-left:50px;
 }
 
 .starOne {
@@ -79,7 +79,7 @@ header h1 {
 
 .starFour {
     position:absolute;
-    margin-left:680px;
+    margin-left:790px;
     transition: rotate 2s ease;
 }
 
@@ -90,7 +90,7 @@ header h1 {
 
 .starFive {
     position:absolute;
-    margin-left:620px;
+    margin-left:730px;
     margin-top:110px;
     transition:rotate 1s ease;
 }
@@ -102,7 +102,7 @@ header h1 {
 
 .starSix {
     position:absolute;
-    margin-left:750px;
+    margin-left:860px;
     margin-top:130px;
     transition: rotate 1s ease;
 }
@@ -130,7 +130,6 @@ header h1 {
 
 header h2 {
     position:absolute;
-    
     color:navy;
     font-family: "Faculty Glyphic";
     font-size: 22px;
@@ -138,8 +137,7 @@ header h2 {
     font-weight: 400;
     line-height: 25px;
     padding-top:5px;
-    margin-left:-10px;
-    
+    margin-left:20px;
 }
 
 section h2 {
@@ -185,7 +183,7 @@ main ul li a:hover {
 }
 
 .container2 .one {
-    margin-left:-70px;
+    margin-left:30px;
 }
 
 .container2 .one h2 {
@@ -221,7 +219,6 @@ main ul li a:hover {
 main li {
     padding-top:20px;
     width:120px;
-
 }
 
 main ul {
@@ -240,7 +237,6 @@ main img {
     width:800px;
     height:400px;
     margin-top:200px;
-    margin-left:-100px;
 }
 
 footer {
@@ -251,17 +247,13 @@ footer {
     margin-top:20px;
 }
 
-footer p {
-    margin-left:-80px;
-}
-
 .flower {
     position:absolute;
     background: url(images/flower.png) no-repeat center/contain;
     width:180px;
     height:180px;
     margin-top:-60px;
-    padding-left:320px;
+    padding-left:520px;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -282,7 +274,7 @@ footer p {
 
 address {
     margin-top:17px;
-    margin-left:370px;
+    margin-left:400px;
 }
 
 address a {
