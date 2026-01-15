@@ -1,0 +1,19 @@
+html {
+    background-color:#d4defd
+}
+
+h1, h2 {
+    font-family: "Faculty Glyphic";
+}
+
+h1 {
+    font-size:2.5em;
+    margin:auto;
+    text-align:center;
+    margin-top:300px;
+}
+
+h2 {
+    font-size:1.2em;
+    text-align:center;
+}
