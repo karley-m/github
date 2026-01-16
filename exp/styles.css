@@ -1,6 +1,4 @@
-html {
-    background-color:#d4defd
-}
+
 
 h1, h2 {
     font-family: "Faculty Glyphic";
@@ -16,4 +14,10 @@ h1 {
 h2 {
     font-size:1.2em;
     text-align:center;
+}
+
+img {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
 }
