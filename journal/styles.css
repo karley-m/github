@@ -1,0 +1,90 @@
+html {
+    background-color: #dfddbb;
+}
+
+h1 {
+    /* font-family:"aquavit"; */
+    font-family: "futura-100";
+    position:absolute;
+    color:#3e6813;
+    border-radius: 1066px;
+    background: radial-gradient(50% 50% at 50% 50%, #EF9CDA 0%, rgba(219, 48, 105, 0.00) 100%);
+    padding:50px;
+    margin-top:330px;
+    margin-left:70px;
+}
+
+main {
+    display:flex;
+    
+}
+
+section {
+    background-color:#3e6813;
+    border-radius:30px;
+    margin:10px;
+    overflow:auto;
+    height:650px;
+    
+}
+
+article {
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "header header date"
+                         "content content content"
+                         "content content content";
+    background-color: #dfddbb;
+    border-radius:20px;
+    margin:20px;
+}
+
+article h2, article p, article div {
+    color:#3e6813;
+    padding:20px;
+}
+
+
+article h2 {
+    grid-area: header;
+    font-size:40px;
+    font-family: "futura-100";
+}
+
+article div {
+    grid-area:date;
+    font-family: "futura-100-book";
+    text-align:right;
+    margin-left:90px;
+    margin-top:45px;
+}
+
+article p {
+    grid-area:content;
+    margin-top:-40px;
+    columns: 2;
+    font-family: "futura-100-book";
+    line-height:23px;
+}
+
+
+
+main img {
+    margin-top:-60px;
+    margin-bottom:-60px;
+    margin-left:-40px;
+}
+
+footer {
+    background-color:#3e6813;
+    padding:17px;
+}
+
+footer p {
+    text-align:center;
+}
+
+footer a {
+    color:#EF9CDA;
+    font-family: "futura-100-book";
+}
