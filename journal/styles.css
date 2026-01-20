@@ -67,7 +67,10 @@ article p {
     line-height:23px;
 }
 
-
+main a {
+    background-color:#EF9CDA;
+    color:#3e6813;
+}
 
 main img {
     margin-top:-60px;
