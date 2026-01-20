@@ -5,16 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madlibs Sketch</title>
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Londrina+Sketch&display=swap" rel="stylesheet">
+
     <style>
         
+        body {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: "sketch one two"
+                                 "sketch three four";
+        }
+
+        #one {
+            grid-area:one;
+        }
+
+        #two {
+            grid-area:two;
+        }
+
+        #three {
+            grid-area:three;
+            margin-top:-350px;
+        }
+
+        #four {
+            grid-area:four;
+            margin-top:-350px;
+        }
+
+        p {
+            margin-top:500px;
+            margin-left:420px;
+            font-size:11px;
+            position:absolute;
+            font-family: "Faculty Glyphic";
+            columns:2;
+            width:800px;
+            column-width: 500px;
+            column-width: 100px;
+            grid-area:three;
+        }
+
     </style>
+
 </head>
 <body>
     <img src="images/madlibssketch.jpg">
-    <img src="images/Frame 1.jpg" width="400">
-    <img src="images/Frame 2.jpg" width="400">
-    <img src="images/Frame 3.jpg" width="400">
-    <img src="images/Frame 4.jpg" width="400">
+
+    <div id="one">
+        <img src="images/Frame 1.jpg" width="400">
+    </div>
+
+    <div id="two">
+        <img src="images/Frame 2.jpg" width="400">
+    </div>
+
+    <div id="three">
+        <img src="images/Frame 3.jpg" width="400">
+    </div>
+
+    <div id="four">
+        <img src="images/Frame 4.jpg" width="400">
+    </div>
+
+    <p>In my sketch, I worked on creating thumbnails to storyboard what I wanted each screen to look like for my Madlibs, labeling movement along the way. I know I wanted the hands to be in the perspective of the person looking at the screen, but I workshopped how I wanted the first frame with the buzzing pocket to look. I wanted the sequence to play out like a story where you discover what's in your pocket, there is a question and a return, and a conclusion where there is the option to play again. In the digital comp frames above, I chose a red and green color palette and created quick refined sketches to place where I want the character elements to go (like the person, the small animal, and the hands). I chose a fun and friendly font to match the friendly encounter with a small animal who has a lot to say. </p>
     
 </body>
 </html>
