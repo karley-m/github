@@ -17,8 +17,7 @@ main {
     margin:auto;
     display:flex;
     align-items: center;
-    justify-content: center;
-    min-height: 700px;
+    min-height: 550px;
 }
 
 main section {
@@ -210,19 +209,12 @@ section ul li {
 
 #everypicture {
     flex:1;
-    width:150px;
-    margin-left:10px;
 }
 
-#gameon {flex:1;
-    margin-left:35px;
+#gameon {
+    flex:1;
+    
 }
-
-/* main h2 {
-    color: #FFF;
-    margin-top:60px;
-    padding-left:10px;
-} */
 
 footer {
     font-family: "Faculty Glyphic";
@@ -230,7 +222,6 @@ footer {
     display:flex;
     justify-content: center;
     flex:1;
-    margin-top:20px;
 }
 
 .flower {
