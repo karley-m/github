@@ -14,6 +14,7 @@ html {
 
 body {
     height:100%;
+    color:white;
 }
 
 main {
@@ -23,10 +24,11 @@ main {
     width: 100%;
     max-width: 1200px;
     margin:auto;
-    margin-bottom:100px;
+    margin-bottom:70px;
     display:flex;
     min-height: 330px;
     border: 7px white solid;
+    border-radius:12px;
 }
 
 main section {
@@ -34,15 +36,14 @@ main section {
     border-right: 7px white solid;
 }
 
-main section last-of-type {
+main section:last-of-type {
     border-right:none;
 }
 
 main h2 {
-    margin-top:100px;
+    padding-left:50px;
     font-family: "Faculty Glyphic";
     font-size: 26px;
-    color:white;
 }
 
 main ul {
@@ -70,17 +71,18 @@ main ul li a:hover {
     width:100%;
     max-width:1200px;
     margin:auto;
+    
 }
 
 header {
-    margin-bottom:100px;
+    margin-bottom:140px;
     position:relative;
 }
 
 header h1 {
     position:absolute;
-    top:2px;
-    left:215px;
+    top:58px;
+    left:262px;
     color:navy;
     font-family: "Faculty Glyphic";
     font-size: 18px;
@@ -107,14 +109,15 @@ header h3 {
 
 #chat {
     position:absolute;
-    left:180px;
-    bottom:0px;
+    left:230px;
+    top:30px;
+    transform: rotate(-25deg);
 }
 
-#leo {
+#cat {
     position:absolute;
-    top:50px;
-    left:50px;
+    top:90px;
+    left:350px;
 }
 
 #shelf {
@@ -125,8 +128,8 @@ header h3 {
 
 #starOne {
     position:absolute;
-    left:40px;
-    bottom:15px;
+    left:130px;
+    bottom:6px;
     transition: rotate 2s ease;
 }
 
@@ -201,19 +204,16 @@ footer {
     display:flex;
     justify-content: center;
     flex:1;
+    gap:450px;
     align-items:center;
 }
 
-.flower {
+#flower {
     position:absolute;
     background: url(images/flower.png) no-repeat center/contain;
-    width:50px;
+    width:60px;
     height:50px;
-    top:60px;
-    left:520px;
     display:flex;
-    justify-content:center;
-    align-items:center;
     border-radius:50%;
     animation: spin 2s linear infinite;
 }
@@ -229,10 +229,6 @@ footer {
     }
 }
 
-/* address {
-    
-} */
-
 address a {
-    color:#FFF
+    color:#FFF;
 }
