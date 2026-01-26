@@ -4,27 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiment 2</title>
+
+    <style>
+
+        html {
+            background-image: url(images/stardust.png);
+        }
+
+        body {
+            color:aliceblue;
+            text-align:center;
+            font-family: "Faculty Glyphic";
+        }
+
+        
+
+    </style>
 </head>
 <body>
     <h1>Experiment 2</h1>
 
+    <p>help! i'm stuck on one of our four neighboring planets in our solar system. guess which one it is.</p>
 
-
-
+    <div id="img"></div>
 
     <script>
 
-        var colorQuestion = prompt ('what color am i thinking of? (hint: its either red, blue, or green.)');
+        function randomPlanet() {
+            var planets = ['mercury','venus','mars','jupiter','pluto'];
+            var pickedPlanet = planets[randomInt(0,4)];
+            console.log(pickedPlanet);
 
-        var colors 
-
-        function color(colorQuestion) {
-            if (color === 'red' || color === 'Red') {
-                console.log(`${color}? You guessed correct!`)
-            } else if (color === 'blue' || color === 'Blue') {
-                console.log(``)
-            }
+            return pickedPlanet;
         }
+
+        // function randomPlanet() {
+        //     return planets[randomInt(0, planets.length -1)];
+        // }
+
+        function randomInt (min,max) {
+            return Math.floor ((max - min + 1) * Math.random()) + min;
+        }
+
+        var userPlanet = prompt ("help! i'm stuck on a planet in our solar system. guess which one it is. and it's not earth!", "");
+
+        if (userPlanet) {
+            userPlanet = userPlanet.toLowerCase();
+        }
+
+        function checkPlanet() {
+            
+            var p = document.querySelector('p');
+            var img = document.querySelector('div');
+
+            if (!userPlanet) {
+                p.innerHTML = "what planet is that? is it a new discovery?";
+            } else if (userPlanet === 'pluto') {
+                p.innerHTML = "hey, that's not technically a planet. but you can try again."
+            } else if (userPlanet === null || userPlanet === '') {
+                p.innerHTML = "what planet is that? is it a new discovery?";
+            } else if (userPlanet === randomPlanet()) {
+                p.innerHTML = 'you guessed it! i am actually stuck though. would you mind helping me get back?';
+            } else {
+                p.innerHTML = 'oh no, wrong one! but you can try again.';
+            }
+
+            if (randomPlanet() === 'mercury') {
+                img.innerHTML = '<img src="images/mercury.png">'
+            }
+
+            if (randomPlanet() === 'venus') {
+                img.innerHTML = '<img src="images/venus.png">'
+            }
+
+            if (randomPlanet() === 'mars') {
+                img.innerHTML = '<img src="images/mars.png">'
+            }
+
+            if (randomPlanet() === 'jupiter') {
+                img.innerHTML = '<img src="images/jupiter.png">'
+            }
+         }
+
+        checkPlanet();
+
 
     </script>
 
