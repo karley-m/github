@@ -17,6 +17,10 @@
             font-family: "Faculty Glyphic";
         }
 
+        img {
+            filter:drop-shadow(0 0 10px #fff);
+        }
+
         
 
     </style>
@@ -29,6 +33,8 @@
     <div id="img"></div>
 
     <script>
+        //this code generates a random planet out of an array (var planets) and prompts the user to guess which planet it has chosen. the random is generated through function randomInt which uses Math.floor. the function checkPlanet() does the main work. document.querySelector is used to target the p and img div in the html. then, the if statements change the innerHTML depending on which outcome occurs. there is another if statement nested in the else if (userPlanet === planet) to decide the image to be shown on the screen depending on which planet is chosen and matched. i added this to make jupiter larger on the screen than the other planets. lastly, the function is called in checkPlanet()
+
 
         function randomPlanet() {
             var planets = ['mercury','venus','mars','jupiter','pluto'];
@@ -38,15 +44,13 @@
             return pickedPlanet;
         }
 
-        // function randomPlanet() {
-        //     return planets[randomInt(0, planets.length -1)];
-        // }
-
         function randomInt (min,max) {
             return Math.floor ((max - min + 1) * Math.random()) + min;
         }
 
+
         var userPlanet = prompt ("help! i'm stuck on one of our four neighboring planets in our solar system. guess which one it is.", "");
+        var planet = randomPlanet();
 
         if (userPlanet) {
             userPlanet = userPlanet.toLowerCase();
@@ -56,33 +60,24 @@
             
             var p = document.querySelector('p');
             var img = document.querySelector('div');
+            
 
-            if (!userPlanet) {
+            if (!userPlanet || userPlanet === '' || userPlanet === null) {
                 p.innerHTML = "what planet is that? is it a new discovery?";
+                img.innerHTML = '<img src="images/question.png" width=200px>';
             } else if (userPlanet === 'pluto') {
                 p.innerHTML = "hey, that's not technically a planet. but you can try again."
-            } else if (userPlanet === null || userPlanet === '') {
-                p.innerHTML = "what planet is that? is it a new discovery?";
-            } else if (userPlanet === randomPlanet()) {
+                img.innerHTML = '<img src="images/pluto.png">';
+            } else if (userPlanet === planet) {
                 p.innerHTML = 'you guessed it! i am actually stuck though. would you mind helping me get back?';
+                if (planet === 'jupiter') {
+                    img.innerHTML = `<img src="images/jupiter.png" width=500px>`;
+                } else {
+                img.innerHTML = `<img src="images/${planet}.png" width=200px>`;
+                }
             } else {
                 p.innerHTML = 'oh no, wrong one! but you can try again.';
-            }
-
-            if (randomPlanet() === 'mercury') {
-                img.innerHTML = '<img src="images/mercury.png">'
-            }
-
-            if (randomPlanet() === 'venus') {
-                img.innerHTML = '<img src="images/venus.png">'
-            }
-
-            if (randomPlanet() === 'mars') {
-                img.innerHTML = '<img src="images/mars.png">'
-            }
-
-            if (randomPlanet() === 'jupiter') {
-                img.innerHTML = '<img src="images/jupiter.png">'
+                img.innerHTML = '';
             }
          }
 
