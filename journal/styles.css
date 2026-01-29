@@ -10,12 +10,14 @@ h1 {
     border-radius: 1066px;
     background: radial-gradient(50% 50% at 50% 50%, #EF9CDA 0%, rgba(219, 48, 105, 0.00) 100%);
     padding:50px;
-    margin-top:330px;
-    margin-left:70px;
+    top:360px;
+    left:110px;
+    z-index:2;
 }
 
 main {
     display:flex;
+    
     
 }
 
@@ -23,8 +25,10 @@ section {
     background-color:#3e6813;
     border-radius:30px;
     margin:10px;
+    margin-top:40px;
     overflow:auto;
-    height:650px;
+    height:700px;
+    border:#EF9CDA 5px solid;
     
 }
 
@@ -55,8 +59,6 @@ article div {
     grid-area:date;
     font-family: "futura-100-book";
     text-align:right;
-    margin-left:90px;
-    margin-top:45px;
 }
 
 article p {
@@ -73,14 +75,20 @@ main a {
 }
 
 main img {
-    margin-top:-60px;
+    position:relative;
+    z-index:1;
+    top:30px;
+    /* margin-top:-60px;
     margin-bottom:-60px;
-    margin-left:-40px;
+    margin-left:-40px; */
+    
+    
 }
 
 footer {
     background-color:#3e6813;
-    padding:17px;
+    padding:1px;
+    z-index:0;
 }
 
 footer p {
