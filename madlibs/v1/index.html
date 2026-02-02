@@ -9,6 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 
     <!-- fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/qzf6vvp.css">
 
     <!-- link to style -->
     <link rel="stylesheet" href="styles.css">
@@ -24,12 +25,14 @@
         <h1>What's in Your Pocket?</h1>
         <h2>Fill out the form to find out.</h2>
 
-        <img alt="person inquisitively looks down at their pocket when they notice something is moving inside it">
+        
 
     </header>
 
     <main>
-        <section id="madlib-questions1">
+        <img id="person" src="images/person.png" width=350px alt="person inquisitively looks down at their pocket when they notice something is moving inside it">
+
+        <section id="madlib-questions1" class="madlib-questions">
             <form>
                 <label for="exclaimation">Exclaimation:</label><input type="text" required>
                 <label for="name">Name:</label><input type="text" required>
@@ -41,11 +44,11 @@
                 <label for="adjective2">Adjective:</label><input type="text" required>
                 <label for="noun2">Noun:</label><input type="text" required>
                 <label for="food">Food:</label><input type="text" required>
-                <label for="next1">Next</label><input type="submit">
+                <input type="submit">
             </form>
         </section>
 
-        <section id="madlib-questions2">
+        <section id="madlib-questions2" class="madlib-questions">
             <form>
                 <label for="noun3">Noun:</label><input type="text" required>
                 <label for="tvshow">TV Show:</label><input type="text" required>
