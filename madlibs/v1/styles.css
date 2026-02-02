@@ -1,0 +1,21 @@
+img {
+    display:block;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+html {
+    background-color:#563635;
+}
+
+#madlib-questions2 {
+    display:none;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #D6D9DC;
+    outline: dashed gray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
