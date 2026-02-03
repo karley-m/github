@@ -22,66 +22,152 @@
 <body>
 
     <header>
-        <h1>What's in Your Pocket?</h1>
-        <h2>Fill out the form to find out.</h2>
 
-        
+            <h1>What's in Your Pocket?</h1>
+            <h2>Fill out the form to find out.</h2>
 
     </header>
 
     <main>
-        <img id="person" src="images/person.png" width=370px alt="person inquisitively looks down at their pocket when they notice something is moving inside it">
+
+        <section id="question-images">
+            <img id="questionmark" src="images/question-mark.png">
+
+            <img id="person" src="images/person.png" width=370px alt="person inquisitively looks down at their pocket when they notice something is moving inside it">
+
+            <img id="bordergif" src="images/bordergif.gif" width=760px alt="a gif of a moving pink pencil border">
+        </section>
 
         <section id="madlib-questions1" class="madlib-questions">
             <form>
-                <label for="exclaimation">Exclaimation:</label>
-                <input id="exclaimation" type="text" required>
-                
-                <label for="name">Name:</label>
-                <input id="name" type="text" required>
-                
-                <label for="city">City:</label>
-                <input id="city" type="text" required>
-                
-                <label for="adjective1">Adjective:</label>
-                <input id="adjective1" type="text" required>
-                
-                <label for="noun1">Noun:</label>
-                <input id="noun1" type="text" required>
-                
-                <label for="animal">Animal:</label>
-                <input id="animal" type="text" required>
-                
-                <label for="job">Job:</label>
-                <input id="job" type="text" required>
-                
-                <label for="adjective2">Adjective:</label>
-                <input id="adjective2" type="text" required>
-               
-                <label for="noun2">Noun:</label>
-                <input id="noun2" type="text" required>
-                
-                <label for="food">Food:</label>
-                <input id="food" type="text" required>
 
-                <button type="submit" value="next">Next</button>
+                <div class="question">
+                    <label for="exclaimation">Exclaimation:</label>
+                    <input id="exclaimation" type="text" required>
+                </div>
+
+                <div class="question">
+                    <label for="name">Name:</label>
+                    <input id="name" type="text" required>
+                </div>
+
+                <div class="question">
+                    <label for="city">City:</label>
+                    <input id="city" type="text" required>
+                </div>
+
+                <div class="question">
+                    <label for="adjective1">Adjective:</label>
+                    <input id="adjective1" type="text" required>
+                </div>
+
+                <div class="question">
+                    <label for="noun1">Noun:</label>
+                    <input id="noun1" type="text" required>
+                </div>
+
+                <div class="question">
+                    <label for="animal">Animal:</label>
+                    <input id="animal" type="text" required>
+                </div>
+
+                <div class="question">
+                    <label for="job">Job:</label>
+                    <input id="job" type="text" required>
+                </div>
+
+                <div class="question">
+                    <label for="adjective2">Adjective:</label>
+                    <input id="adjective2" type="text" required>
+                </div>
+
+                <div class="question">
+                    <label for="noun2">Noun:</label>
+                    <input id="noun2" type="text" required>
+                </div>
+
+                <div class="question">
+                    <label for="food">Food:</label>
+                    <input id="food" type="text" required>
+                </div>
+
             </form>
+
+            <button type="submit" value="next">Next</button>
         </section>
 
         <section id="madlib-questions2" class="madlib-questions">
             <form>
-                <label for="noun3">Noun:</label><input type="text" required>
-                <label for="tvshow">TV Show:</label><input type="text" required>
-                <label for="sounding">Sound + ing:</label><input type="text" required>
-                <label for="number1">Number:</label><input type="text" required>
-                <label for="verb">Verb:</label><input type="text" required>
-                <label for="adjective3">Adjective:</label><input type="text" required>
-                <label for="noun4">Noun:</label><input type="text" required>
-                <label for="number2">Number:</label><input type="text" required>
-                <label for="pluralnoun">Plural noun:</label><input type="text" required>
-                <button type="submit" value="Submit">Submit</button>
+
+                <div class="question">
+                    <label for="noun3">Noun:</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="question">
+                    <label for="tvshow">TV Show:</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="question">
+                    <label for="sounding">Sound + ing:</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="question">
+                    <label for="number1">Number:</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="question">
+                    <label for="verb">Verb:</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="question">
+                    <label for="adjective3">Adjective:</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="question">
+                    <label for="noun4">Noun:</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="question">
+                    <label for="number2">Number:</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="question">
+                    <label for="pluralnoun">Plural noun:</label>
+                    <input type="text" required>
+                </div>
+
             </form>
+
+            <button type="submit" value="Submit">Submit</button>
         </section>
+
+        <div id="madlibs-output1">
+            <section id="output-images1">
+                <img id="hands" src="images/hands.png" width="600" alt="a pair of hands cupping something">
+
+                <img id="shrew" src="images/shrew.png" width="200" alt="a little worried shrew">
+
+                <img id="bordergif" src="images/bordergif.gif" width=760px alt="a gif of a moving pink pencil border">
+            </section>
+
+            <section class="madlib-questions">
+
+                <p><span>exclaimation</span> Hi there, I'm so sorry to bother you, but I am a lost little shrew. My name is <span>name</span> and I seem to have fallen in your pocket when you traveled to <span>city</span>. Where are we by the way? Is this some kind of <span>adjective</span> <span>noun</span>? I've never seen a human up close. The largest animal I've probably seen is a <span>animal</span>. Do you think you'd win in a fight against a <span>animal</span>? Probably, right? Back home, I work as a <span>job</span> in shrew society. I live in the <span>adjective</span> <span>noun</span>. I hope you washed your hands recently! I am deathly allergic to <span>food</span>. Doc says I have only a few minutes if I'm expose, which is why I carry a <span>noun</span> at all times. Back to business, right. I fell in your pocket because I got distracted when you were watching <span>tvshow</span>on the TV and fell asleep, right in your luggage. Next thing I know, I woke up to the sound of <span>sounding</span> and here we are.</p>
+
+                <button type="submit" value="Submit">Ok...</button>
+
+
+
+            </section>
+        </div>
 
 
     </main>
