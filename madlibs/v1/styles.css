@@ -160,13 +160,13 @@ input[type="text"]:focus {
 
 /* ------- displaying on and off -------- */
 
-#madlib-questions1 {
-    display:display;
+/* #madlib-questions1 {
+    display:none;
 }
 
 #question-images {
-    display:display;
-}
+    display:none;
+} */
 
 #madlib-questions2 {
     display:none;
