@@ -1,0 +1,174 @@
+/* --------- resets */
+img {
+    display:block;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+html {
+    background-image:url(images/start-background.jpg);
+    background-repeat:no-repeat;
+}
+
+header {
+    font-family: "ruddy", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color:#F99BAA;
+    
+}
+
+header h1 {
+    font-size:60px;
+    margin-bottom:0;
+}
+
+header h2 {
+    margin-top:0;
+}
+
+body {
+    display:flex;
+    flex-direction:column;
+    align-items: flex-end;
+    padding-right:50px;
+}
+
+#person {
+    position:absolute;
+    bottom:60px;
+    left:150px;
+}
+
+#bordergif {
+    position:absolute;
+    top:130px;
+    right:20px;
+    
+}
+
+#questionmark {
+    position:absolute;
+    left:200px;
+    top:0;
+    animation: floatAnimation 10s infinite ease-in-out;
+}
+
+@keyframes floatAnimation {
+	0% { transform: translate(0%, 90%); }
+	50% { transform: translate(0%,110%); }
+	100% { transform: translate(0, 90%); }
+}
+
+.madlib-input {
+    background-color:#EAD7AC;
+    font-family: "ruddy", sans-serif;
+    font-size:20px;
+    font-weight:700;
+    color:#4F2524;
+    width:700px;
+    padding:30px;
+    border-radius:30px;
+    position:relative;
+   
+}
+
+.madlib-input form {
+    display:grid;
+    grid-template-rows: repeat(5,auto);
+    grid-auto-flow: column;
+    grid-gap:20px;
+    padding-bottom:50px;
+    
+}
+
+.madlib-input p {
+    margin:0;
+}
+
+.madlib-input label {
+    padding-bottom:10px;
+}
+
+.madlib-input input {
+    width:250px;
+    box-shadow: inset 0 1px 3px gray;
+}
+
+button {
+    font-size:25px;
+    color:#4F2524;
+    padding:15px;
+    width:200px;
+    background-color:#F99BAA;
+    border:none;
+    font-weight:700;
+    border-radius:15px;
+    box-shadow: #4F2524 2px 3px 4px;
+    position:absolute;
+    right:30px;
+    bottom:20px;
+}
+
+button:hover {
+    scale:1.2;
+}
+
+form div {
+    display:flex;
+    flex-direction:column;
+}
+
+input[type="text"] {
+    font-family: futura;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+input[type="text"]:focus {
+    border: 1px dashed #4F2524;
+    outline: none;
+    box-shadow: #5D7719 0 4px 8px;
+    font-family: futura;
+    
+}
+
+#output1 p {
+    font-family: futura;
+    font-weight:400;
+    line-height: 1.5em;
+    padding-bottom:50px;
+}
+
+#output1 span {
+    color:#C64D5D;
+}
+
+#hands {
+    position:absolute;
+    left:40px;
+    bottom:0px;
+    z-index:2;
+}
+
+#shrew {
+    position:absolute;
+    left:200px;
+    bottom:200px;
+    z-index:3;
+    animation: shake 1.3s infinite;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-1px); }
+    20%, 40%, 60%, 80% { transform: translateX(1px); }
+  }
+
+/* ------- displaying on and off -------- */
+
+.hidden {
+    display: none;
+}
