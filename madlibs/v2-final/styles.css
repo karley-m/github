@@ -86,6 +86,7 @@ body {
 
 .madlib-input p {
     margin:0;
+    display:flex;
 }
 
 .madlib-input label {
@@ -119,7 +120,8 @@ button:hover {
 }
 
 #back {
-    right:300px;
+    right:30px;
+    bottom:100px;
 }
 
 form div {
@@ -172,6 +174,21 @@ input[type="text"]:focus {
     10%, 30%, 50%, 70%, 90% { transform: translateX(-1px); }
     20%, 40%, 60%, 80% { transform: translateX(1px); }
   }
+
+footer {
+    background-color:#5D7719;
+    text-align:center;
+    display:block;
+    justify-content:center;
+    padding-top:10px;
+    padding-right:100px;
+    padding-left:100px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+    width:100%;
+    
+}
 
 /* ------- displaying on and off -------- */
 
