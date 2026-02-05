@@ -143,6 +143,15 @@ input[type="text"]:focus {
     
 }
 
+#output1 {
+    background-color:#EAD7AC;
+    width:700px;
+    padding-top:50px;
+    padding:30px;
+    border-radius:30px;
+    position:relative;
+}
+
 #output1 p {
     font-family: futura;
     font-weight:400;
@@ -176,15 +185,15 @@ input[type="text"]:focus {
   }
 
 footer {
-    background-color:#5D7719;
+    color:#5D7719;
+    font-family:futura;
     text-align:center;
     display:block;
     justify-content:center;
-    padding-top:10px;
+    
     padding-right:100px;
     padding-left:100px;
-    margin-left:auto;
-    margin-right:auto;
+    margin:auto;
     text-align:left;
     width:100%;
     

@@ -6,6 +6,7 @@
     const error = document.querySelector('#error');
     const output1 = document.querySelector('#output1');
     const header = document.querySelector('header');
+    
 
     document.querySelector('#gotoinput2').addEventListener('click', function(event) {
         const exclaimation = document.querySelector('#exclaimation').value;
@@ -67,6 +68,16 @@
 
     document.querySelector('#submit').addEventListener('click', function(event) {
 
+        const exclaimation = document.querySelector('#exclaimation').value;
+        const name = document.querySelector('#name').value;
+        const city = document.querySelector('#city').value;
+        const adj1 = document.querySelector('#adj1').value;
+        const noun1 = document.querySelector('#noun1').value;
+        const animal = document.querySelector('#animal').value;
+        const job = document.querySelector('#job').value;
+        const adj2 = document.querySelector('#adj2').value;
+        const noun2 = document.querySelector('#noun2').value;
+        const food = document.querySelector('#food').value;
         const noun3 = document.querySelector('#noun3').value;
         const tvshow = document.querySelector('#tvshow').value;
         const sounding = document.querySelector('#sounding').value;
@@ -110,13 +121,14 @@
             sections[1].className = "hidden";
             sections[2].className = "hidden";
             sections[3].className = null;
-            sections[4].className = "madlib-input";
+            sections[4].className = "madlib-output";
             error2.innerHTML = '';
 
             header.innerHTML = "<h1>it's a shrew! what's he saying?</h1>";
+            header.style.paddingBottom = "20px"
             header.style.textAlign = "center";
 
-            output1.innerHTML = `${exclaimation} Hi there, I'm so sorry to bother you, but I am a lost little shrew. My name is ${name} and I seem to have fallen in your pocket when you traveled to ${city}. Where are we by the way? Is this some kind of ${adjective} ${noun}? I've never seen a human up close. The largest animal I've probably seen is a ${animal}. Do you think you'd win in a fight against a ${animal}? Probably, right? Back home, I work as a ${job} in shrew society. I live in the ${adjective} ${noun}. I hope you washed your hands recently! I am deathly allergic to ${food}. Doc says I have only a few minutes if I'm expose, which is why I carry a ${noun} at all times. Back to business, right. I fell in your pocket because I got distracted when you were watching ${tvshow}on the TV and fell asleep, right in your luggage. Next thing I know, I woke up to the sound of ${sounding} and here we are.`
+            output1.innerHTML = `<p><span>${exclaimation}</span> Hi there, I'm so sorry to bother you, but I am a lost little shrew. My name is <span>${name}</span> and I seem to have fallen in your pocket when you traveled to <span>${city}</span>. Where are we by the way? Is this some kind of <span>${adj1}</span> <span>${noun1}</span>? I've never seen a human up close. The largest animal I've probably seen is a <span>${animal}</span>. Do you think you'd win in a fight against a <span>${animal}</span>? Probably, right? Back home, I work as a <span>${job}</span> in shrew society. I live in the <span>${adj2}</span> <span>${noun2}</span>. I hope you washed your hands recently! I am deathly allergic to <span>${food}</span>. Doc says I have only a few minutes if I'm expose, which is why I carry a <span>${noun3}</span> at all times. Back to business, right. I fell in your pocket because I got distracted when you were watching <span>${tvshow}</span> on the TV and fell asleep, right in your luggage. Next thing I know, I woke up to the sound of <span>${sounding}</span> and here we are.</p>`
             
         }
              
@@ -125,7 +137,7 @@
         
     });
 
-    const myForm = document.querySelectorAll('form');
+    
     
     
 
