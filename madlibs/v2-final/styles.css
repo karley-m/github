@@ -10,6 +10,7 @@ img {
 html {
     background-image:url(images/start-background.jpg);
     background-repeat:no-repeat;
+    height:100%;
 }
 
 header {
@@ -33,6 +34,11 @@ body {
     flex-direction:column;
     align-items: flex-end;
     padding-right:50px;
+    height:100%;
+}
+
+main {
+    flex:1;
 }
 
 #person {
@@ -141,7 +147,7 @@ input[type="text"]:focus {
     
 }
 
-#output1, #output2 {
+#output1, #output2, #output3 {
     background-color:#EAD7AC;
     width:700px;
     padding-top:50px;
@@ -150,14 +156,15 @@ input[type="text"]:focus {
     position:relative;
 }
 
-#output1 p, #output2 p {
+#output1 p, #output2 p, #output3 p {
     font-family: futura;
     font-weight:400;
     line-height: 1.5em;
     padding-bottom:50px;
 }
 
-#output1 span, #output2 p {
+
+#output1 span, #output2 span, #output3 span {
     color:#C64D5D;
 }
 
@@ -175,6 +182,14 @@ input[type="text"]:focus {
     z-index:3;
     animation: shake 1.3s infinite;
 }
+
+
+#photo, #together {
+    position:absolute;
+    left:130px;
+}
+
+
 
 @keyframes shake {
     0%, 100% { transform: translateX(0); }

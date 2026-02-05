@@ -5,8 +5,12 @@
     const sections = document.querySelectorAll('section');
     const error = document.querySelector('#error');
     const output1 = document.querySelector('#output1');
+    const output2 = document.querySelector('#output2');
+    const output3 = document.querySelector('#output3');
     const header = document.querySelector('header');
-    const food = document.querySelector('#food').value;
+    const error1 = document.querySelector('#error1');
+    const error2 = document.querySelector('#error2');
+  
 
     document.querySelector('#gotoinput2').addEventListener('click', function(event) {
         const exclaimation = document.querySelector('#exclaimation').value;
@@ -21,8 +25,6 @@
         const food = document.querySelector('#food').value;
 
         
-
-
         event.preventDefault();
         if(exclaimation == '') {
             error1.innerHTML = 'please provide an exclaimation'
@@ -130,8 +132,9 @@
             header.style.paddingBottom = "20px"
             header.style.textAlign = "center";
 
-            output1.innerHTML = `<p><span>${exclaimation}</span> Hi there, I'm so sorry to bother you, but I am a lost little shrew. My name is <span>${name}</span> and I seem to have fallen in your pocket when you traveled to <span>${city}</span>. Where are we by the way? Is this some kind of <span>${adj1}</span> <span>${noun1}</span>? I've never seen a human up close. The largest animal I've probably seen is a <span>${animal}</span>. Do you think you'd win in a fight against a <span>${animal}</span>? Probably, right? Back home, I work as a <span>${job}</span> in shrew society. I live in the <span>${adj2}</span> <span>${noun2}</span>. I hope you washed your hands recently! I am deathly allergic to <span>${food}</span>. Doc says I have only a few minutes if I'm expose, which is why I carry a <span>${noun3}</span> at all times. Back to business, right. I fell in your pocket because I got distracted when you were watching <span>${tvshow}</span> on the TV and fell asleep, right in your luggage. Next thing I know, I woke up to the sound of <span>${sounding}</span> and here we are.</p>`
+            output1.innerHTML = `<p><span>${exclaimation}</span> Hi there, I'm so sorry to bother you, but I am a lost little shrew. My name is <span>${name}</span> and I seem to have fallen in your pocket when you traveled to <span>${city}</span>. Where are we by the way? Is this some kind of <span>${adj1}</span> <span>${noun1}</span>? I've never seen a human up close. The largest animal I've probably seen is a <span>${animal}</span>. Do you think you'd win in a fight against a <span>${animal}</span>? Probably, right? Back home, I work as a <span>${job}</span> in shrew society. I live in the <span>${adj2}</span> <span>${noun2}</span>. I hope you washed your hands recently! I am deathly allergic to <span>${food}</span>. Doc says I have only a few minutes if I'm expose, which is why I carry a/an <span>${noun3}</span> at all times. Back to business, right. I fell in your pocket because I got distracted when you were watching <span>${tvshow}</span> on the TV and fell asleep, right in your luggage. Next thing I know, I woke up to the sound of <span>${sounding}</span> and here we are.</p>`
             
+
             document.querySelector('#gotooutput2').addEventListener('click', function(event) {
                 event.preventDefault();
     
@@ -139,26 +142,75 @@
                 const verb = document.querySelector('#verb').value;
                 const adj3 = document.querySelector('#adj3').value;
                 
+                sections[3].className = "hidden";
                 sections[4].className = "hidden";
-                sections[5].className = "hidden";
-                sections[6].className = "hidden";
-                sections[7].className = "output2";
+                sections[5].className = null;
+                sections[6].className = "output2";
+                
     
                 output2.innerHTML = `<p>I have something very important to ask you. My kid was with me and I seemed to have lost him. I look away for <span>${number2}</span> seconds to <span>${verb}</span>, and boom, gone. Here's a picture. He's very <span>${adj3}</span>.</p>`
     
             });
+
+            document.querySelector('#gotooutput3').addEventListener('click', function(event) {
+                event.preventDefault();
+
+                const exclaimation = document.querySelector('#exclaimation').value;
+                const number2 = document.querySelector('#number2').value;
+                const pluralnoun = document.querySelector('#pluralnoun').value;
+
+                sections[5].className = "hidden";
+                sections[6].className = "hidden";
+                sections[7].className = "output3";
+                sections[8].className = null;
+
+                header.innerHTML = "<h1>hooray!<h1>";
+                header.style.textAlign = "center";
+
+                output3.innerHTML = `<p><span>${exclaimation}</span> You've found him - in your other pocket I see. Thank you so much for your help, we will be out of your hair before you can count <span>${number2}</span> <span>${pluralnoun}</span>.</p>`
+                
+            });
+
+            document.querySelector('#playagain').addEventListener('click', function(event){
+                event.preventDefault();
+                reset();
+            });
+
         }
 
-        
+        function reset() {
+            sections[0].className = '';
+            sections[1].className = "madlib-input";
+            sections[2].className = "hidden";
+            sections[3].className = "hidden";
+            sections[4].className = "hidden";
+            sections[5].className = "hidden";
+            sections[6].className = "hidden";
+            sections[7].className = "hidden";
+            sections[8].className = "hidden";
+
+
+            header.innerHTML = `<h1>What's in Your Pocket?</h1>
+            <h2>Fill out the form to find out.</h2>`;
+
+            header.style.paddingBottom = '';
+            header.style.textAlign = '';
+
+            const textFields = document.querySelectorAll('input[type=text]');
+            for (let i=0; i<textFields.length; i++) {
+                textFields[i].value = '';
+            }
+
+            output1.innerHTML = '';
+            output2.innerHTML = '';
+            output3.innerHTML = '';
+
+            error1.innerHTML = '';
+            error2.innerHTML = '';
+        }
     });
 
    
-
-    
-    
-    
-
-
 
 
 }());
