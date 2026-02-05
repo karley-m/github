@@ -17,7 +17,6 @@ header {
     font-weight: 700;
     font-style: normal;
     color:#F99BAA;
-    
 }
 
 header h1 {
@@ -72,7 +71,6 @@ body {
     padding:30px;
     border-radius:30px;
     position:relative;
-   
 }
 
 .madlib-input form {
@@ -81,7 +79,6 @@ body {
     grid-auto-flow: column;
     grid-gap:20px;
     padding-bottom:50px;
-    
 }
 
 .madlib-input p {
@@ -99,6 +96,7 @@ body {
 }
 
 button, #submit {
+    font-family: "ruddy", sans-serif;
     font-size:25px;
     color:#4F2524;
     padding:15px;
@@ -143,7 +141,7 @@ input[type="text"]:focus {
     
 }
 
-#output1 {
+#output1, #output2 {
     background-color:#EAD7AC;
     width:700px;
     padding-top:50px;
@@ -152,14 +150,14 @@ input[type="text"]:focus {
     position:relative;
 }
 
-#output1 p {
+#output1 p, #output2 p {
     font-family: futura;
     font-weight:400;
     line-height: 1.5em;
     padding-bottom:50px;
 }
 
-#output1 span {
+#output1 span, #output2 p {
     color:#C64D5D;
 }
 
@@ -190,13 +188,15 @@ footer {
     text-align:center;
     display:block;
     justify-content:center;
-    
     padding-right:100px;
     padding-left:100px;
     margin:auto;
     text-align:left;
     width:100%;
-    
+}
+
+footer a {
+    color:#EAD7AC;
 }
 
 /* ------- displaying on and off -------- */

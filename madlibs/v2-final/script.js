@@ -6,7 +6,7 @@
     const error = document.querySelector('#error');
     const output1 = document.querySelector('#output1');
     const header = document.querySelector('header');
-    
+    const food = document.querySelector('#food').value;
 
     document.querySelector('#gotoinput2').addEventListener('click', function(event) {
         const exclaimation = document.querySelector('#exclaimation').value;
@@ -19,7 +19,9 @@
         const adj2 = document.querySelector('#adj2').value;
         const noun2 = document.querySelector('#noun2').value;
         const food = document.querySelector('#food').value;
+
         
+
 
         event.preventDefault();
         if(exclaimation == '') {
@@ -130,12 +132,27 @@
 
             output1.innerHTML = `<p><span>${exclaimation}</span> Hi there, I'm so sorry to bother you, but I am a lost little shrew. My name is <span>${name}</span> and I seem to have fallen in your pocket when you traveled to <span>${city}</span>. Where are we by the way? Is this some kind of <span>${adj1}</span> <span>${noun1}</span>? I've never seen a human up close. The largest animal I've probably seen is a <span>${animal}</span>. Do you think you'd win in a fight against a <span>${animal}</span>? Probably, right? Back home, I work as a <span>${job}</span> in shrew society. I live in the <span>${adj2}</span> <span>${noun2}</span>. I hope you washed your hands recently! I am deathly allergic to <span>${food}</span>. Doc says I have only a few minutes if I'm expose, which is why I carry a <span>${noun3}</span> at all times. Back to business, right. I fell in your pocket because I got distracted when you were watching <span>${tvshow}</span> on the TV and fell asleep, right in your luggage. Next thing I know, I woke up to the sound of <span>${sounding}</span> and here we are.</p>`
             
+            document.querySelector('#gotooutput2').addEventListener('click', function(event) {
+                event.preventDefault();
+    
+                const number1 = document.querySelector('#number1').value;
+                const verb = document.querySelector('#verb').value;
+                const adj3 = document.querySelector('#adj3').value;
+                
+                sections[4].className = "hidden";
+                sections[5].className = "hidden";
+                sections[6].className = "hidden";
+                sections[7].className = "output2";
+    
+                output2.innerHTML = `<p>I have something very important to ask you. My kid was with me and I seemed to have lost him. I look away for <span>${number2}</span> seconds to <span>${verb}</span>, and boom, gone. Here's a picture. He's very <span>${adj3}</span>.</p>`
+    
+            });
         }
-             
-        
-        
+
         
     });
+
+   
 
     
     
