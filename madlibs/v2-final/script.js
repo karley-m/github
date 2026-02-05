@@ -10,7 +10,7 @@
     const header = document.querySelector('header');
     const error1 = document.querySelector('#error1');
     const error2 = document.querySelector('#error2');
-  
+    
 
     document.querySelector('#gotoinput2').addEventListener('click', function(event) {
         const exclaimation = document.querySelector('#exclaimation').value;
@@ -26,41 +26,41 @@
 
         
         event.preventDefault();
-        if(exclaimation == '') {
-            error1.innerHTML = 'please provide an exclaimation'
-            document.querySelector('#exclaimation').focus();
-        } else if (name === '') {
-            error1.innerHTML = 'please provide a name'
-            document.querySelector('#name').focus();
-        } else if (city == '') {
-            error1.innerHTML = 'please provide a city'
-            document.querySelector('#city').focus();
-        } else if (adj1 == '') {
-            error1.innerHTML = 'please provide an adjective'
-            document.querySelector('#adj1').focus();
-        } else if (noun1 == '') {
-            error1.innerHTML = 'please provide a noun'
-            document.querySelector('#noun1').focus();
-        } else if (animal == '') {
-            error1.innerHTML = 'please provide an animal'
-            document.querySelector('#animal').focus();
-        } else if (job == '') {
-            error1.innerHTML = 'please provide a job'
-            document.querySelector('#job').focus();
-        } else if (adj2 == '') {
-            error1.innerHTML = 'please provide an adjective'
-            document.querySelector('#adj2').focus();
-        } else if (noun2 == '') {
-            error1.innerHTML = 'please provide a noun'
-            document.querySelector('#noun2').focus();
-        } else if (food == '') {
-            error1.innerHTML = 'please provide a food'
-            document.querySelector('#food').focus();
-        } else {
-            sections[1].className = "hidden";
-            sections[2].className = "madlib-input";
-            error1.innerHTML = '';
-        }
+            if(exclaimation == '') {
+                error1.innerHTML = 'please provide an exclaimation'
+                document.querySelector('#exclaimation').focus();
+            } else if (name === '') {
+                error1.innerHTML = 'please provide a name'
+                document.querySelector('#name').focus();
+            } else if (city == '') {
+                error1.innerHTML = 'please provide a city'
+                document.querySelector('#city').focus();
+            } else if (adj1 == '') {
+                error1.innerHTML = 'please provide an adjective'
+                document.querySelector('#adj1').focus();
+            } else if (noun1 == '') {
+                error1.innerHTML = 'please provide a noun'
+                document.querySelector('#noun1').focus();
+            } else if (animal == '') {
+                error1.innerHTML = 'please provide an animal'
+                document.querySelector('#animal').focus();
+            } else if (job == '') {
+                error1.innerHTML = 'please provide a job'
+                document.querySelector('#job').focus();
+            } else if (adj2 == '') {
+                error1.innerHTML = 'please provide an adjective'
+                document.querySelector('#adj2').focus();
+            } else if (noun2 == '') {
+                error1.innerHTML = 'please provide a noun'
+                document.querySelector('#noun2').focus();
+            } else if (food == '') {
+                error1.innerHTML = 'please provide a food'
+                document.querySelector('#food').focus();
+            } else {
+                sections[1].className = "hidden";
+                sections[2].className = "madlib-input";
+                error1.innerHTML = '';
+            }
 
     });
 
@@ -91,6 +91,7 @@
         const noun4 = document.querySelector('#noun4').value;
         const number2 = document.querySelector('#number2').value;
         const pluralnoun = document.querySelector('#pluralnoun').value;
+
 
         event.preventDefault();
         if(noun3 == '') {
@@ -179,16 +180,13 @@
         }
 
         function reset() {
+
+            for (const eachSection of sections){
+                eachSection.className = "hidden"
+            }
+
             sections[0].className = '';
             sections[1].className = "madlib-input";
-            sections[2].className = "hidden";
-            sections[3].className = "hidden";
-            sections[4].className = "hidden";
-            sections[5].className = "hidden";
-            sections[6].className = "hidden";
-            sections[7].className = "hidden";
-            sections[8].className = "hidden";
-
 
             header.innerHTML = `<h1>What's in Your Pocket?</h1>
             <h2>Fill out the form to find out.</h2>`;
