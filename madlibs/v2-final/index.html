@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mad Libs Code Version 1</title>
+    <title>Mad Libs Code Version 2</title>
 
     <!-- normalize -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
@@ -57,8 +57,8 @@
                 </div>
 
                 <div>
-                    <label for="adjective1">Adjective:</label>
-                    <input id="adjective1" type="text" required>
+                    <label for="adj1">Adjective:</label>
+                    <input id="adj1" type="text" required>
                 </div>
 
                 <div>
@@ -77,8 +77,8 @@
                 </div>
 
                 <div>
-                    <label for="adjective2">Adjective:</label>
-                    <input id="adjective2" type="text" required>
+                    <label for="adj2">Adjective:</label>
+                    <input id="adj2" type="text" required>
                 </div>
 
                 <div>
@@ -93,7 +93,7 @@
 
             </form>
 
-            <button type="submit" value="next">Next</button>
+            <button id="gotoinput2">Next</button>
             <p>Page 1/2</p>
         </section>
 
@@ -126,8 +126,8 @@
                 </div>
 
                 <div>
-                    <label for="adjective3">Adjective:</label>
-                    <input id="adjective3" type="text" required>
+                    <label for="adj3">Adjective:</label>
+                    <input id="adj3" type="text" required>
                 </div>
 
                 <div>
@@ -145,13 +145,15 @@
                     <input id="pluralnoun" type="text" required>
                 </div>
 
+                <input type="submit" value="Submit" id="submit">
             </form>
 
-            <button type="submit" value="submit">Submit</button>
+            <button id="back">Back</button>
+            <p>Page 2/2</p>
         </section>
 
-        <div id="output1" class="hidden">
-            <section id="output-images1">
+        <div id="output1">
+            <section id="output-images1" class="hidden">
                 <img id="hands" src="images/hands.png" width="600" alt="a pair of hands cupping something">
 
                 <img id="shrew" src="images/shrew.png" width="200" alt="a little worried shrew">
@@ -162,7 +164,7 @@
 
                 <p><span>exclaimation</span> Hi there, I'm so sorry to bother you, but I am a lost little shrew. My name is <span>name</span> and I seem to have fallen in your pocket when you traveled to <span>city</span>. Where are we by the way? Is this some kind of <span>adjective</span> <span>noun</span>? I've never seen a human up close. The largest animal I've probably seen is a <span>animal</span>. Do you think you'd win in a fight against a <span>animal</span>? Probably, right? Back home, I work as a <span>job</span> in shrew society. I live in the <span>adjective</span> <span>noun</span>. I hope you washed your hands recently! I am deathly allergic to <span>food</span>. Doc says I have only a few minutes if I'm expose, which is why I carry a <span>noun</span> at all times. Back to business, right. I fell in your pocket because I got distracted when you were watching <span>tvshow</span>on the TV and fell asleep, right in your luggage. Next thing I know, I woke up to the sound of <span>sounding</span> and here we are.</p>
 
-                <button type="submit" value="Submit">Ok...</button>
+                <button id="gotooutput2">Ok...</button>
 
 
 
@@ -176,7 +178,9 @@
 
 
 
+<footer>
 
+</footer>
 
     
 </body>
