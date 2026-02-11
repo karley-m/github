@@ -17,8 +17,6 @@ h1 {
 
 main {
     display:flex;
-    
-    
 }
 
 section {
@@ -43,9 +41,20 @@ article {
     margin:20px;
 }
 
-article h2, article p, article div {
+article h2, article p, article div, article figcaption {
     color:#3e6813;
     padding:20px;
+    font-family: "futura-100-book";
+}
+
+article figcaption {
+    margin-right:0;
+}
+
+#journal4 {
+    display: flex;
+    position:relative;
+    margin:50px;
 }
 
 
@@ -67,6 +76,10 @@ article p {
     columns: 2;
     font-family: "futura-100-book";
     line-height:23px;
+}
+
+article img {
+    padding:20px;
 }
 
 main a {
