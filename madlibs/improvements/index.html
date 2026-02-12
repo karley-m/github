@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad Libs Code Version 2</title>
+
+    <!-- normalize -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/qzf6vvp.css">
+
+    <!-- link to style -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- link to js -->
+     <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+
+            <h1>What's in Your Pocket?</h1>
+            <h2>Fill out the form to find out.</h2>
+
+    </header>
+
+    <main>
+
+        <!-- section 0 -->
+        <section id="input1-images">
+            <img id="questionmark" src="images/question-mark.png" alt="question mark">
+
+            <img id="person" src="images/person.png" width=370 alt="person inquisitively looks down at their pocket when they notice something is moving inside it">
+
+            <img id="bordergif" src="images/bordergif.gif" width=760 alt="a gif of a moving pink pencil border">
+        </section>
+
+        <!-- section 1 -->
+        <section id="input1" class="madlib-input">
+            <form>
+
+                <div>
+                    <label for="exclaimation">Exclaimation:</label>
+                    <input id="exclaimation" type="text" required>
+                </div>
+
+                <div>
+                    <label for="name">Name:</label>
+                    <input id="name" type="text" required>
+                </div>
+
+                <div>
+                    <label for="city">City:</label>
+                    <input id="city" type="text" required>
+                </div>
+
+                <div>
+                    <label for="adj1">Adjective:</label>
+                    <input id="adj1" type="text" required>
+                </div>
+
+                <div>
+                    <label for="noun1">Noun:</label>
+                    <input id="noun1" type="text" required>
+                </div>
+
+                <div>
+                    <label for="animal">Animal:</label>
+                    <input id="animal" type="text" required>
+                </div>
+
+                <div>
+                    <label for="job">Job:</label>
+                    <input id="job" type="text" required>
+                </div>
+
+                <div>
+                    <label for="adj2">Adjective:</label>
+                    <input id="adj2" type="text" required>
+                </div>
+
+                <div>
+                    <label for="noun2">Noun:</label>
+                    <input id="noun2" type="text" required>
+                </div>
+
+                <div>
+                    <label for="food">Food:</label>
+                    <input id="food" type="text" required>
+                </div>
+
+            </form>
+
+            <button id="gotoinput2">Next</button>
+            <p>Page 1/2</p>
+            <p id="error1"></p>
+        </section>
+
+        <!-- section 2 -->
+        <section id="input2" class="madlib-input hidden">
+            <form>
+ 
+                <div>
+                    <label for="noun3">Noun:</label>
+                    <input id="noun3" type="text" required>
+                </div>
+
+                <div>
+                    <label for="tvshow">TV Show:</label>
+                    <input id="tvshow" type="text" required>
+                </div>
+
+                <div>
+                    <label for="sounding">Sound + ing:</label>
+                    <input id="sounding" type="text" required>
+                </div>
+
+                <div>
+                    <label for="number1">Number:</label>
+                    <input id="number1" type="text" required>
+                </div>
+
+                <div>
+                    <label for="verb">Verb:</label>
+                    <input id="verb" type="text" required>
+                </div>
+
+                <div>
+                    <label for="adj3">Adjective:</label>
+                    <input id="adj3" type="text" required>
+                </div>
+
+                <div>
+                    <label for="noun4">Noun:</label>
+                    <input id="noun4" type="text" required>
+                </div>
+
+                <div>
+                    <label for="number2">Number:</label>
+                    <input id="number2" type="text" required>
+                </div>
+
+                <div>
+                    <label for="pluralnoun">Plural noun:</label>
+                    <input id="pluralnoun" type="text" required>
+                </div>
+
+
+                
+            </form>
+
+            <button id="submit">Submit</button>
+            <button id="back">Back</button>
+            <p>Page 2/2</p>
+            <p id="error2"></p>
+        </section>
+
+        <!-- section 3 -->
+        <section id="output-images1" class="hidden">
+            <img id="hands" src="images/hands.png" width="600" alt="a pair of hands cupping something">
+
+            <img id="shrew" src="images/shrew.png" width="200" alt="a little worried shrew">
+
+        </section>
+
+        <!-- section 4 -->
+        <section class="hidden">
+
+            <article id="output1"></article>
+                <button id="gotooutput2">Ok...</button>
+        </section>
+
+        <!-- section 5 -->
+        <section id="output-images2" class="hidden">
+            <img id="photo" src="images/photo.png" width="400" alt="a polaroid photo of the shrew and his kid">
+        </section>
+
+        <!-- section 6 -->
+        <section class="hidden">
+            <article id="output2"></article>
+                <button id="gotooutput3">Wait a minute...</button>
+        </section>
+
+        <!-- section 7 -->
+        <section class="hidden">
+            <article id="output3"></article>
+                <button id="playagain">Play again</button>
+        </section>
+
+        <!-- section 8 -->
+        <section id="output-images3" class="hidden">
+            <img id="together" src="images/together.png" width="400" alt="the shrew reunited with his kid">
+        </section>
+
+
+
+    </main>
+
+
+
+
+
+<footer>
+<p>coded by <a href="../../index.html">karley makar</a></p>
+</footer>
+
+    
+</body>
+
+</html>
