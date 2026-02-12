@@ -22,9 +22,9 @@
         const noun1 = document.querySelector('#noun1').value;
         const animal = document.querySelector('#animal').value;
         const job = document.querySelector('#job').value;
-        const adj2 = document.querySelector('#adj2').value;
-        const noun2 = document.querySelector('#noun2').value;
         const food = document.querySelector('#food').value;
+        const noun2 = document.querySelector('#noun2').value;
+        const tvshow = document.querySelector('#tvshow').value;
 
         
         event.preventDefault();
@@ -38,27 +38,27 @@
             } else if (city == '') {
                 error1.innerHTML = 'please provide a city'
                 document.querySelector('#city').focus();
-            } else if (adj1 == '') {
-                error1.innerHTML = 'please provide an adjective'
-                document.querySelector('#adj1').focus();
-            } else if (noun1 == '') {
-                error1.innerHTML = 'please provide a noun'
-                document.querySelector('#noun1').focus();
             } else if (animal == '') {
                 error1.innerHTML = 'please provide an animal'
                 document.querySelector('#animal').focus();
             } else if (job == '') {
                 error1.innerHTML = 'please provide a job'
                 document.querySelector('#job').focus();
-            } else if (adj2 == '') {
+            } else if (adj1 == '') {
                 error1.innerHTML = 'please provide an adjective'
-                document.querySelector('#adj2').focus();
-            } else if (noun2 == '') {
+                document.querySelector('#adj1').focus();
+            } else if (noun1 == '') {
                 error1.innerHTML = 'please provide a noun'
-                document.querySelector('#noun2').focus();
+                document.querySelector('#noun1').focus();
             } else if (food == '') {
                 error1.innerHTML = 'please provide a food'
                 document.querySelector('#food').focus();
+            } else if (noun2 == '') {
+                error1.innerHTML = 'please provide a noun'
+                document.querySelector('#noun2').focus();
+            } else if (tvshow == '') {
+                error1.innerHTML = 'please provide a TV show'
+                document.querySelector('#tvshow').focus();
             } else {
                 sections[1].className = "hidden";
                 sections[2].className = "madlib-input";
@@ -80,33 +80,25 @@
         const exclaimation = document.querySelector('#exclaimation').value;
         const name = document.querySelector('#name').value;
         const city = document.querySelector('#city').value;
-        const adj1 = document.querySelector('#adj1').value;
-        const noun1 = document.querySelector('#noun1').value;
         const animal = document.querySelector('#animal').value;
         const job = document.querySelector('#job').value;
-        const adj2 = document.querySelector('#adj2').value;
-        const noun2 = document.querySelector('#noun2').value;
+        const adj1 = document.querySelector('#adj1').value;
+        const noun1 = document.querySelector('#noun1').value;
         const food = document.querySelector('#food').value;
-        const noun3 = document.querySelector('#noun3').value;
+        const noun2 = document.querySelector('#noun2').value;
         const tvshow = document.querySelector('#tvshow').value;
         const sounding = document.querySelector('#sounding').value;
         const number1 = document.querySelector('#number1').value;
         const verb = document.querySelector('#verb').value;
-        const adj3 = document.querySelector('#adj3').value;
-        const noun4 = document.querySelector('#noun4').value;
+        const adj2 = document.querySelector('#adj2').value;
+        const noun3 = document.querySelector('#noun3').value;
         const number2 = document.querySelector('#number2').value;
         const pluralnoun = document.querySelector('#pluralnoun').value;
 
 
         event.preventDefault();
         /* --------- checking for errors ---------------------------- */
-        if(noun3 == '') {
-            error2.innerHTML = 'please provide a noun'
-            document.querySelector('#noun3').focus();
-        } else if (tvshow === '') {
-            error2.innerHTML = 'please provide a TV show'
-            document.querySelector('#tvshow').focus();
-        } else if (sounding == '') {
+        if(sounding == '') {
             error2.innerHTML = 'please provide a sound ending in "ing"'
             document.querySelector('#sounding').focus();
         } else if (number1 == '') {
@@ -115,12 +107,9 @@
         } else if (verb == '') {
             error2.innerHTML = 'please provide a verb'
             document.querySelector('#verb').focus();
-        } else if (adj3 == '') {
-            error2.innerHTML = 'please provide an adjective'
-            document.querySelector('#adj3').focus();
-        } else if (noun4 == '') {
+        } else if (noun3 == '') {
             error2.innerHTML = 'please provide a noun'
-            document.querySelector('#noun4').focus();
+            document.querySelector('#noun3').focus();
         } else if (number2 == '') {
             error2.innerHTML = 'please provide a number'
             document.querySelector('#number2').focus();
@@ -142,16 +131,16 @@
             header.style.textAlign = "center";
 
             /* --------- madlibs output 1 ---------------------------- */
-            output1.innerHTML = `<p><span>${exclaimation}</span> Hi there, I'm so sorry to bother you, but I am a lost little shrew. My name is <span>${name}</span> and I seem to have fallen in your pocket when you traveled to <span>${city}</span>. Where are we by the way? Is this some kind of <span>${adj1}</span> <span>${noun1}</span>? I've never seen a human up close. The largest animal I've probably seen is a <span>${animal}</span>. Do you think you'd win in a fight against a <span>${animal}</span>? Probably, right? Back home, I work as a <span>${job}</span> in shrew society. I live in the <span>${adj2}</span> <span>${noun2}</span>. I hope you washed your hands recently! I am deathly allergic to <span>${food}</span>. Doc says I have only a few minutes if I'm expose, which is why I carry a/an <span>${noun3}</span> at all times. Back to business, right. I fell in your pocket because I got distracted when you were watching <span>${tvshow}</span> on the TV and fell asleep, right in your luggage. Next thing I know, I woke up to the sound of <span>${sounding}</span> and here we are.</p>`
+            output1.innerHTML = `<p><span>${exclaimation}</span> - hi there, I'm so sorry to bother you, but I am a lost little shrew. My name is <span>${name}</span> and I seem to have fallen in your pocket when you traveled to <span>${city}</span>. Where are we by the way? I've never seen a human up close. The largest animal I've probably seen is a <span>${animal}</span>. Do you think you'd win in a fight against a <span>${animal}</span>? Probably, right? Back home, I work as a <span>${job}</span> in shrew society. I live in the <span>${adj1}</span> <span>${noun1}</span>. I hope you washed your hands recently! I am deathly allergic to <span>${food}</span>. Doc says I have only a few minutes if I'm exposed, which is why I carry a/an <span>${noun2}</span> at all times. Back to business, right. I fell in your pocket because I got distracted when you were watching <span>${tvshow}</span> on the TV and fell asleep, right in your luggage. Next thing I know, I woke up to the sound of <span>${sounding}</span> and here we are.</p>`
             
             /* --------- "Ok..." button on output page 1 ---------------------------- */
             document.querySelector('#gotooutput2').addEventListener('click', function(event) {
                 event.preventDefault();
     
                 /* --------- grabbing values for output page 2 ---------------------------- */
-                const number1 = document.querySelector('#number1').value;
+                const number1 = document.querySelector('#number2').value;
                 const verb = document.querySelector('#verb').value;
-                const adj3 = document.querySelector('#adj3').value;
+                const adj2 = document.querySelector('#adj2').value;
                 
                 /* --------- switching sections ---------------------------- */
                 sections[3].className = "hidden";
@@ -160,7 +149,7 @@
                 sections[6].className = "output2";
                 
                 /* --------- madlibs output 2 ---------------------------- */
-                output2.innerHTML = `<p>I have something very important to ask you. My kid was with me and I seemed to have lost him. I look away for <span>${number2}</span> seconds to <span>${verb}</span>, and boom, gone. Here's a picture. He's very <span>${adj3}</span>.</p>`
+                output2.innerHTML = `<p>I have something very important to ask you. My kid was with me and I seemed to have lost him. I look away for <span>${number1}</span> seconds to <span>${verb}</span>, and boom, gone. Here's a picture. He's very <span>${adj2}</span>.</p>`
     
             });
 
@@ -184,7 +173,7 @@
                 header.style.textAlign = "center";
 
                 /* --------- madlibs output 3 ---------------------------- */
-                output3.innerHTML = `<p><span>${exclaimation}</span> You've found him - in your other pocket I see. Thank you so much for your help, we will be out of your hair before you can count <span>${number2}</span> <span>${pluralnoun}</span>.</p>`
+                output3.innerHTML = `<p><span>${exclaimation}</span> - you've found him! In your other pocket I see. Thank you so much for your help, we will be out of your hair before you can count <span>${number2}</span> <span>${pluralnoun}</span>.</p>`
                 
             });
  

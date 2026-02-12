@@ -142,16 +142,17 @@ form div {
 }
 
 input[type="text"] {
-    font-family: futura;
+    font-family: "Alegreya";
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-left: 10px;
 }
 
 input[type="text"]:focus {
     border: 1px dashed #4F2524;
     outline: none;
     box-shadow: #5D7719 0 4px 8px;
-    font-family: futura;
+    font-family: "Alegreya";
     
 }
 
@@ -167,7 +168,9 @@ input[type="text"]:focus {
 }
 
 #output1 p, #output2 p, #output3 p {
-    font-family: futura;
+    font-family: "Alegreya";
+    font-weight: 900;
+    font-size:20px;
     font-weight:400;
     line-height: 1.5em;
     padding-bottom:50px;
@@ -175,19 +178,21 @@ input[type="text"]:focus {
 
 #output1 span, #output2 span, #output3 span {
     color:#C64D5D;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 #hands {
     position:absolute;
     left:40px;
-    bottom:0px;
+    bottom:40px;
     z-index:2;
 }
 
 #shrew {
     position:absolute;
     left:200px;
-    bottom:200px;
+    bottom:250px;
     z-index:3;
     animation: shake 1.3s infinite;
 }
@@ -207,7 +212,7 @@ input[type="text"]:focus {
 
 footer {
     color:#5D7719;
-    font-family:futura;
+    font-family: "Alegreya";
     text-align:center;
     display:block;
     justify-content:center;
