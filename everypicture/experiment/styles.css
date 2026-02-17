@@ -1,0 +1,134 @@
+* {
+    box-sizing:border-box;
+}
+
+html {
+    background-image: url(images/background.png);
+    background-repeat:no-repeat;
+    width:100%;
+    overflow-y:scroll;
+    height:3000px;
+}
+
+header {
+    padding-bottom:50px;
+}
+
+h1 {
+    margin:auto;
+    margin-top:20px;
+    position:fixed;
+    left:50%;
+    transform: translate(-50%);
+    z-index:4;
+    font-family: "Fraunces";
+    transition: color 2s ease;
+}
+
+section {
+    filter:blur(3px);
+    opacity:0.4;
+    transition:3s;
+    box-shadow:
+    0 0 60px 30px #5bc0ff,
+    0 0 100px 60px rgb(128, 240, 255),
+    0 0 140px 90px rgb(154, 242, 255);
+}
+
+.show {
+    filter:blur(0px);
+    opacity:1;
+    transition:3s;
+}
+
+#sky1 {
+    position:fixed;
+    top:-20px;
+    margin:auto;
+    z-index:1;
+}
+
+#sky2 {
+    position:fixed;
+    top:-20px;
+    margin:auto;
+    z-index:1;
+    transition: opacity 2s ease;
+    opacity:0;
+}
+
+#day, #night {
+    position:fixed;
+    left:50%;
+    transform: translate(-50%);
+}
+
+#day {
+    z-index:3;
+}
+
+#night {
+    opacity:0;
+    z-index:3;
+    transition: opacity 1s ease;
+}
+
+#sun {
+    z-index:2;
+    position:fixed;
+    top:50px;
+    left:50%;
+    transform: translate(-50%);
+    transition: top 2s ease;
+}
+
+#moon {
+    z-index:2;
+    position:fixed;
+    top:150px;
+    left:50%;
+    transform: translate(-50%);
+    transition: top 2s ease;
+}
+
+#image1 {
+    position:absolute;
+    top:200px;
+    right:50px;
+}
+
+#image1:hover {
+    z-index:2;
+    transform: rotate(20deg);
+    filter:saturate(2.3);
+    cursor:zoom-in;
+}
+
+#grass {
+    position:absolute;
+    top:380px;
+    right:0;
+}
+
+#image2 {
+    position:absolute;
+    top:280px;
+    left:50px;
+}
+
+#image2:hover {
+    filter:drop-shadow(0 0 10px #fff);
+    cursor:zoom-in;
+}
+
+#image3 {
+    position:absolute;
+    top:1000px;
+    left:50px;
+}
+
+#image3:hover {
+    filter:drop-shadow(0 0 10px #fff);
+    cursor:zoom-in;
+}
+
