@@ -43,13 +43,13 @@ main {
     height:100%;
 }
 
-/* ------------- horizion css ------------ */
+/* ------------- horizon css ------------ */
 
-#horizion {
+#horizon {
     position:relative;
 }
 
-#horizion #daysky {
+#horizon #daysky {
     position:fixed;
     top:-14px;
     z-index: 1;
@@ -58,13 +58,13 @@ main {
     0 0 100px 60px #40b759
 }
 
-#horizion #day {
+#horizon #day {
     position:fixed;
     top:-23px;
     z-index:3;
 }
 
-#horizion #sun {
+#horizon #sun {
     position:fixed;
     z-index:2;
     left:50%;
@@ -72,17 +72,17 @@ main {
     transform: translate(-50%);
 }
 
-/* #horizion #nightsky {
-
+#horizon #nightsky {
+    opacity:0;
 }
 
-#horizion #night {
-
+#horizon #night {
+    opacity:0;
 }
 
-#horizion #moon {
-
-} */
+#horizon #moon {
+    opacity:0;
+}
 
 /* ---------------- all of the images and their positions ---------- */
 
