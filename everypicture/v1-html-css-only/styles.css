@@ -1,0 +1,181 @@
+/* -------------- general ------------ */
+
+* {
+    box-sizing:border-box;
+}
+
+img {
+    display:block;
+}
+
+/* how do i make it so that the background image fills the browser size no matter the size. right now, it becomes skinny when i shrink it. and all of the pictures move their position */
+html {
+    background-image:url(images/background.jpg);
+    background-repeat:no-repeat;
+    width:100%;
+    background-position: center;
+    background-size: contain;
+    background-attachment: scroll;
+    overflow-y:scroll;
+    height:2550px;
+}
+
+header {
+    margin:auto;
+    position:relative;
+}
+
+h1 {
+    position:absolute;
+    top:450px;
+    text-align:center;
+    line-height:0.8em;
+    left:213px;
+    font-family: "Fraunces";
+    color:#8A4547;
+}
+
+body {
+    margin: auto;
+}
+
+main {
+    height:100%;
+}
+
+/* ------------- horizion css ------------ */
+
+#horizion {
+    position:relative;
+}
+
+#horizion #daysky {
+    position:fixed;
+    top:-14px;
+    z-index: 1;
+    box-shadow:
+    0 0 60px 30px #38A04F,
+    0 0 100px 60px #40b759
+}
+
+#horizion #day {
+    position:fixed;
+    top:-23px;
+    z-index:3;
+}
+
+#horizion #sun {
+    position:fixed;
+    z-index:2;
+    left:50%;
+    top:1px;
+    transform: translate(-50%);
+}
+
+/* #horizion #nightsky {
+
+}
+
+#horizion #night {
+
+}
+
+#horizion #moon {
+
+} */
+
+/* ---------------- all of the images and their positions ---------- */
+
+#picnic {
+    position:absolute;
+    top:400px;
+    right:0px;
+}
+
+#grass1 {
+    position:absolute;
+    top:490px;
+    right:0px;
+}
+
+#treebush {
+    position:absolute;
+    right:-20px;
+    top:1000px;
+}
+
+#lake {
+    position:absolute;
+    left:30px;
+    top:1100px;
+}
+
+#bear {
+    position: absolute;
+    top:1400px;
+    right:160px;
+}
+
+#smokey {
+    position:absolute;
+    top:1200px;
+    left:390px;
+}
+
+#grass2 {
+    position:absolute;
+    top:1400px;
+    left:0px;
+}
+
+#mountain {
+    position:absolute;
+    top:1500px;
+    left:0px;
+}
+
+#grass3 {
+    position:absolute;
+    top:1900px;
+    right:-20px;
+}
+
+#treebush2 {
+    position:absolute;
+    top:1700px;
+    left:0px;
+}
+
+#firepit {
+    position:absolute;
+    top:2100px;
+    left:500px;
+}
+
+#pawprints {
+    position:absolute;
+    top:2200px;
+    left:20px;
+}
+
+
+/* ------------ making images move on hover ----------- */
+
+.picture {
+    position:relative;
+}
+
+.picture:hover {
+    filter:saturate(2.3);
+    cursor:zoom-in;
+    transform: scale(1.01);
+    z-index:2;
+}
+
+/* TODO: - overlay styling for when someone clicks on a picture,
+         - .show class for intersection observer
+         - styling for night sky
+         - fix footer to be at bottom of page 
+         - using 'bear' frames to make a moving picture when clicking on the bear
+         - campfire animation png, put glow on it
+         - flashlight illustration that when it clicks, it reveals dark colored text in front of it that says "till next time" */
