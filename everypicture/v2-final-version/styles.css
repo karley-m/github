@@ -1,0 +1,246 @@
+/* -------------- general ------------ */
+
+* {
+    box-sizing:border-box;
+}
+
+img {
+    display:block;
+}
+
+html {
+    background-image: linear-gradient(#38A04F, #09063E);
+}
+
+header {
+    margin:auto;
+    position:relative;
+}
+
+h1 {
+    position:absolute;
+    top:345px;
+    text-align:center;
+    line-height:0.9em;
+    left:187px;
+    font-family: "Fraunces";
+    color:#8A4547;
+}
+
+body {
+    max-width:1200px;
+    margin: auto;
+    background-image:url(images/background.jpg);
+    
+    height:2700px;
+    overflow-y:scroll;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+main {
+    height:100%;
+    position:relative;
+    max-width:1200px;
+    margin:auto;
+}
+
+footer {
+    margin-top:-70px;
+    margin-left:20px;
+    font-family: "Fraunces";
+    color:white;
+}
+
+footer a {
+    color:white;
+}
+
+/* ------------- horizon css ------------ */
+
+
+#daysky {
+    position:fixed;
+    top:0px;
+    z-index: 1;
+    /* box-shadow:
+    0 0 60px 30px #38A04F,
+    0 0 100px 60px #40b759; */
+    box-shadow:
+    0 0 60px 30px #38A04F;
+    opacity:1;
+}
+
+#day {
+    position:fixed;
+    top:25px;
+    z-index:3;
+}
+
+#sun {
+    position:fixed;
+    z-index:2;
+    left:50%;
+    top:1px;
+    transform: scale(1);
+    transform: translate(-50%);
+    transition: top 2s ease;
+}
+
+#moon {
+    position:fixed;
+    z-index:2;
+    left:50%;
+    top:1px;
+    transform: scale(1);
+    transform: translate(-50%);
+    transition: top 2s ease;
+}
+
+#nightsky {
+    position:fixed;
+    top:0px;
+    z-index: 1;
+    transition: opacity 2s ease;
+    box-shadow:
+    0 0 60px 30px #1b3b44,
+    0 0 100px 60px #12282e;
+    opacity:0;
+}
+
+#night {
+    position:fixed;
+    opacity:0;
+    top:25px;
+    transition: opacity 2s ease;
+    z-index:3;
+}
+
+/* ---------------- all of the images and their positions ---------- */
+/* use percentages instead of px to position ??? */
+
+#picnic {
+    position:absolute;
+    top:400px;
+    right:0px;
+}
+
+#grass1 {
+    position:absolute;
+    top:490px;
+    right:0px;
+}
+
+#treebush {
+    position:absolute;
+    right:-20px;
+    top:1000px;
+}
+
+#lake {
+    position:absolute;
+    left:30px;
+    top:1100px;
+}
+
+#bear {
+    position: absolute;
+    top:1400px;
+    right:160px;
+}
+
+#smokey {
+    position:absolute;
+    top:1200px;
+    left:390px;
+}
+
+#grass2 {
+    position:absolute;
+    top:1400px;
+    left:0px;
+}
+
+#mountain {
+    position:absolute;
+    top:1500px;
+    left:0px;
+}
+
+#grass3 {
+    position:absolute;
+    top:1900px;
+    right:-20px;
+}
+
+#treebush2 {
+    position:absolute;
+    top:1700px;
+    left:0px;
+}
+
+#firepit {
+    position:absolute;
+    top:1400px;
+    left:500px;
+}
+
+#pawprints {
+    position:absolute;
+    top:1600px;
+    left:20px;
+}
+
+/* ------------- overlay styling ---------- */
+#overlay {
+    position:fixed;
+    background-color: rgba(0,0,0,0.5);
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    z-index:4;
+}
+
+#overlay article {
+    background-color:#fff;
+    padding:20px;
+    width:50vw;
+    height:80vh;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.hidden {
+    display:none;
+}
+
+
+/* ------------ making images move on hover ----------- */
+
+.picture {
+    position:relative;
+}
+
+.picture:hover {
+    filter:saturate(2.3);
+    cursor:zoom-in;
+    transform: scale(1.01);
+    z-index:3;
+}
+
+/* --------------- slow blur show when loading ----------- */
+.show {
+    filter:blur(0px);
+    opacity:1;
+    transition: blur 3s;
+}
+
+/* TODO: - overlay styling for when someone clicks on a picture,
+         - .show class for intersection observer
+         - fix footer to be at bottom of page 
+         - using 'bear' frames to make a moving picture when clicking on the bear
+         - campfire animation png, put glow on it
+         - flashlight illustration that when it clicks, it reveals dark colored text in front of it that says "till next time" */

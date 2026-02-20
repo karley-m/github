@@ -10,14 +10,12 @@ img {
 
 /* how do i make it so that the background image fills the browser size no matter the size. right now, it becomes skinny when i shrink it. and all of the pictures move their position */
 html {
-    background-image:url(images/background.jpg);
-    background-repeat:no-repeat;
+    background-image: url(images/container.jpg);
     width:100%;
-    background-position: center;
-    background-size: contain;
-    background-attachment: scroll;
-    overflow-y:scroll;
-    height:2550px;
+    /* background-size: contain; */
+    /* background-attachment: scroll; */
+    
+    
 }
 
 header {
@@ -27,16 +25,22 @@ header {
 
 h1 {
     position:absolute;
-    top:450px;
+    top:340px;
     text-align:center;
     line-height:0.8em;
-    left:213px;
+    left:200px;
     font-family: "Fraunces";
     color:#8A4547;
 }
 
 body {
     margin: auto;
+    background-image:url(images/background.jpg);
+    height:2700px;
+    overflow-y:scroll;
+    background-repeat:no-repeat;
+    background-position: center;
+
 }
 
 main {
@@ -61,7 +65,7 @@ main {
 
 #horizon #day {
     position:fixed;
-    top:-23px;
+    top:-20px;
     z-index:3;
 }
 
@@ -86,6 +90,7 @@ main {
 }
 
 /* ---------------- all of the images and their positions ---------- */
+/* use percentages instead of px to position ??? */
 
 #picnic {
     position:absolute;
@@ -149,14 +154,40 @@ main {
 
 #firepit {
     position:absolute;
-    top:2100px;
+    top:1400px;
     left:500px;
 }
 
 #pawprints {
     position:absolute;
-    top:2200px;
+    top:1600px;
     left:20px;
+}
+
+/* ------------- overlay styling ---------- */
+#overlay {
+    position:absolute;
+    background-color: rgba(0,0,0,0.5);
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    z-index:4;
+}
+
+#overlay article {
+    background-color:#fff;
+    padding:20px;
+    width:50vw;
+    height:80vh;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.hidden {
+    opacity:0;
 }
 
 
