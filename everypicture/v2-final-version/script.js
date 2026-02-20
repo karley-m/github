@@ -8,16 +8,22 @@ window.addEventListener('load', function(){
     const night = document.querySelector('#night');
     const nightSky = document.querySelector('#nightsky');
 
-    const picnicInfo = document.querySelector('#picnicInfo');
-    const lakeInfo = document.querySelector('#lakeInfo');
-    const bearInfo = document.querySelector('#bearInfo');
-    const smokeyInfo = document.querySelector('#smokeyInfo');
-    const mountainInfo = document.querySelector('#mountainInfo');
-    const firepitInfo = document.querySelector('#firepitInfo');
-    const pawprintsInfo = document.querySelector('#pawprintsInfo');
+    function pictures(){
+        const picnicInfo = document.querySelector('#picnicInfo');
+        const lakeInfo = document.querySelector('#lakeInfo');
+        const bearInfo = document.querySelector('#bearInfo');
+        const smokeyInfo = document.querySelector('#smokeyInfo');
+        const mountainInfo = document.querySelector('#mountainInfo');
+        const firepitInfo = document.querySelector('#firepitInfo');
+        const pawprintsInfo = document.querySelector('#pawprintsInfo');
+    }
+    
     // put each of these const's 
 
+    let sectionTops = [];
+
     const observer = new IntersectionObserver(callBack);
+
     for (const eachSection of sections){
         observer.observe(eachSection);
     }
@@ -26,20 +32,20 @@ window.addEventListener('load', function(){
     function callBack(entries){
         for (const eachEntry of entries){
             if(eachEntry.isIntersecting){
-                eachEntry.target.className += " show";
-                observer.unobserve(eachEntry.target)
+                eachEntry.target.className = "picture show";
+                // observer.unobserve(eachEntry.target)
             } else {
-                eachEntry.target.className = "";
+                eachEntry.target.removeAttribute('class');
             }
         }
     }
     
 
-    // sections.forEach(function (eachSection) {
-    //     sectionTops.push(Math.floor(eachSection.getBoundingClientRect().top) + window.scrollY);
-    // });
+    sections.forEach(function (eachSection) {
+        sectionTops.push(Math.floor(eachSection.getBoundingClientRect().top) + window.scrollY);
+    });
     
-    // console.log(sectionTops);
+    console.log(sectionTops);
 
     window.addEventListener('scroll', function (){
         if (window.scrollY > 900) {

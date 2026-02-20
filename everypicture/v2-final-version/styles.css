@@ -31,7 +31,6 @@ body {
     max-width:1200px;
     margin: auto;
     background-image:url(images/background.jpg);
-    
     height:2700px;
     overflow-y:scroll;
     background-repeat:no-repeat;
@@ -50,6 +49,7 @@ footer {
     margin-left:20px;
     font-family: "Fraunces";
     color:white;
+    z-index:3;
 }
 
 footer a {
@@ -91,7 +91,7 @@ footer a {
     position:fixed;
     z-index:2;
     left:50%;
-    top:1px;
+    top:100px;
     transform: scale(1);
     transform: translate(-50%);
     transition: top 2s ease;
@@ -227,20 +227,27 @@ footer a {
 .picture:hover {
     filter:saturate(2.3);
     cursor:zoom-in;
-    transform: scale(1.01);
+    transform: scale(1.03);
     z-index:3;
 }
 
 /* --------------- slow blur show when loading ----------- */
+
+section {
+    filter:blur(3px);
+    opacity:0.4;
+    transition: filter 2s ease;
+}
 .show {
     filter:blur(0px);
     opacity:1;
-    transition: blur 3s;
+    transition: filter 2s ease;
 }
 
-/* TODO: - overlay styling for when someone clicks on a picture,
-         - .show class for intersection observer
-         - fix footer to be at bottom of page 
+/* TODO: 
+        - overlay styling for when someone clicks on a picture,
+         - .show class for intersection observer 
          - using 'bear' frames to make a moving picture when clicking on the bear
          - campfire animation png, put glow on it
-         - flashlight illustration that when it clicks, it reveals dark colored text in front of it that says "till next time" */
+         - flashlight illustration that when it clicks, it reveals dark colored text in front of it that says "till next time" 
+         - add bird sounds and then frog sounds in transition from day to night*/
