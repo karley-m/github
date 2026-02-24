@@ -50,14 +50,14 @@ footer {
     font-family: "Fraunces";
     color:white;
     z-index:3;
+    opacity:0.4;
 }
 
 footer a {
-    color:white;
+    color:orange;
 }
 
 /* ------------- horizon css ------------ */
-
 
 #daysky {
     position:fixed;
@@ -117,9 +117,9 @@ footer a {
 }
 
 /* ---------------- all of the images and their positions ---------- */
-/* use percentages instead of px to position ??? */
 
-#picnic {
+/* picnic table */
+#one {
     position:absolute;
     top:400px;
     right:0px;
@@ -134,22 +134,25 @@ footer a {
 #treebush {
     position:absolute;
     right:-20px;
-    top:1000px;
+    top:1100px;
 }
 
-#lake {
+/* tube on the lake */
+#two {
     position:absolute;
     left:30px;
     top:1100px;
 }
 
-#bear {
+/* bear */
+#three {
     position: absolute;
     top:1400px;
     right:160px;
 }
 
-#smokey {
+/* smokey the bear */
+#four {
     position:absolute;
     top:1200px;
     left:390px;
@@ -157,11 +160,12 @@ footer a {
 
 #grass2 {
     position:absolute;
-    top:1400px;
-    left:0px;
+    top:1350px;
+    left:-10px;
 }
 
-#mountain {
+/* fire lookout on mountain */
+#five {
     position:absolute;
     top:1500px;
     left:0px;
@@ -175,24 +179,64 @@ footer a {
 
 #treebush2 {
     position:absolute;
-    top:1700px;
+    top:1900px;
     left:0px;
 }
 
-#firepit {
+/* cooking hotdogs around the firepit */
+#six {
     position:absolute;
-    top:1400px;
+    top:2300px;
     left:500px;
+    opacity:0.6;
 }
 
-#pawprints {
+/* pointing out pawprints */
+#seven {
     position:absolute;
-    top:1600px;
-    left:20px;
+    top:2000px;
+    right:50px;
+    opacity:0.7;
+}
+
+#fire {
+    position:absolute;
+    top:2480px;
+    left:310px;
+    filter: drop-shadow(0 0 10px orange);
+}
+
+#flashlight-off {
+    position:absolute;
+    top:2200px;
+    right:150px;
+}
+
+#flashlight-on {
+    position:absolute;
+    top:2203px;
+    right:46px;
+}
+
+#flashlight-on p {
+    color:navy;
+    font-family: "double-pica";
+    font-size:25px;
+    position:absolute;
+    bottom:90px;
+    right:155px;
+    transform: rotate(-30deg);
+    width:50px;
+    text-align:center;
+}
+
+#flashlight-off:hover, #flashlight-on:hover {
+    cursor:pointer;
 }
 
 /* ------------- overlay styling ---------- */
-#overlay {
+
+.overlay {
     position:fixed;
     background-color: rgba(0,0,0,0.5);
     top:0;
@@ -200,21 +244,59 @@ footer a {
     width:100vw;
     height:100vh;
     z-index:4;
+    transition-property: visibility, opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
 }
 
-#overlay article {
+.overlay article {
+    margin:auto;
     background-color:#fff;
     padding:20px;
     width:50vw;
-    height:80vh;
+    height:90vh;
     position:absolute;
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
+    border-radius:20px;
+    text-align:center;
+}
+
+.overlay img {
+    margin:auto;
+    padding-bottom:20px;
+}
+
+.overlay h2 {
+    text-align:center;
+    font-family: "Fraunces";
+}
+
+.overlay button {
+    margin:auto;
+    cursor:pointer;
+    font-family: "double-pica";
+    padding:10px;
+}
+
+.overlay p {
+    margin:auto;
+    padding-bottom:20px;
+    width:500px;
+    font-family: "double-pica";
+    line-height:1.4em;
+    text-align:center;
 }
 
 .hidden {
-    display:none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
 }
 
 
@@ -225,10 +307,15 @@ footer a {
 }
 
 .picture:hover {
+    z-index:4;
+}
+
+.picture img:hover {
     filter:saturate(2.3);
     cursor:zoom-in;
     transform: scale(1.03);
     z-index:3;
+    opacity:1;
 }
 
 /* --------------- slow blur show when loading ----------- */
@@ -244,10 +331,34 @@ section {
     transition: filter 2s ease;
 }
 
-/* TODO: 
-        - overlay styling for when someone clicks on a picture,
-         - .show class for intersection observer 
-         - using 'bear' frames to make a moving picture when clicking on the bear
-         - campfire animation png, put glow on it
-         - flashlight illustration that when it clicks, it reveals dark colored text in front of it that says "till next time" 
-         - add bird sounds and then frog sounds in transition from day to night*/
+#preloader{
+    z-index:5;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+    background-color:greenyellow;
+	color: navy;
+    font-family: "double-pica";
+	font-size: 3em;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.fadeout {
+	animation-name: fadeout;
+	animation-duration: 4s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes fadeout {
+	0%{
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

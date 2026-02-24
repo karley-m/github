@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://use.typekit.net/qzf6vvp.css">
+
     <!-- link to style -->
     <link rel="stylesheet" href="styles.css">
 
@@ -36,8 +38,8 @@
         <img id="moon" src="images/moon.png" alt="the moon" width="150">
 
         <!-- upper half -->
-        <section id="picnic">
-            <img src="images/image4.png" alt="people at a picnic table making sandwiches" width="500">
+        <section id="one" class="picture">
+            <img src="images/picnic.png" alt="people at a picnic table making sandwiches" width="500">
         </section>
 
         <div id="grass1">
@@ -48,24 +50,24 @@
             <img src="images/foliage-4.png" alt="illustrated tree and bush" width="300">
         </div>
 
-        <section id="lake" class="picture">
-            <img src="images/image6.png" alt="kids in a tube on the lake" width="250">
+        <section id="two" class="picture">
+            <img src="images/tube.png" alt="kids in a tube on the lake" width="250">
         </section>
 
-        <section id="bear" class="picture">
-            <img src="images/image7.png" alt="a bear" width="200">
+        <section id="three" class="picture">
+            <img src="images/bear.png" alt="a bear" width="200">
         </section>
 
         <div id="grass2">
             <img src="images/foliage-1.png" alt="another small grass patch hill" width="600">
         </div>
 
-        <section id="smokey" class="picture">
-            <img src="images/image5.png" alt="me posing with smokey bear" width="150">
+        <section id="four" class="picture">
+            <img src="images/smokey.png" alt="me posing with smokey bear" width="150">
         </section>
 
-        <section id="mountain" class="picture">
-            <img src="images/image2.png" alt="a fire lookout atop a mountain" width="300">
+        <section id="five" class="picture">
+            <img src="images/firelookout.png" alt="a fire lookout atop a mountain" width="300">
         </section>
 
 
@@ -78,25 +80,96 @@
             <img src="images/foliage-5.png" alt="a cutout of a redwood tree and some illustrated trees" width="300">
         </div>
 
-        <section id="firepit" class="picture">
-            <img src="images/image1.png" alt="my family cooking hot dogs around a firepit" width="250">
+        <section id="six" class="picture">
+            <img src="images/firepit.png" alt="my family cooking hot dogs around a firepit" width="250">
         </section>
 
-        <section id="pawprints" class="picture">
-            <img src="images/image3.png" alt="me pointing out some paw prints i found on a table at night" width="250">
+        <section id="seven" class="picture">
+            <img src="images/pawprints.png" alt="me pointing out some paw prints i found on a table at night" width="250">
         </section>
+
+        <div id="fire">
+            <img src="images/fire.GIF" alt="animated gif of a small campfire" width="150">
+        </div>
+
+        <div id="flashlight-off">
+            <img src="images/flashlight_off.png" alt="a flashlight" width="300">
+        </div>
+
+        <div id="flashlight-on" class="hidden">
+            <img src="images/flashlight_on.png" alt="a flashlight turned on" width="400">
+            <p>untill next time!</p>
+        </div>
 
         <!-- overlay -->
-        <div id="overlay" class="hidden" >
+        <div id="ol-one" class="overlay hidden">
             <article>
-                <h2>overlay content here</h2>
-                <p>some text here</p>
-                <img src="#">
-                <button class="close">close</button>
+                <h2>picnic time!</h2>
+                <p>shortly after this photo was taken, a giant rhino beetle landed on my brother's shirt. we think it was because of how brightly colored he was. he was technically in his bathing suit because we were getting ready to go to the lake. beside him is my little cousin and my aunt. when the beetle landed on him, no one dared to move. only when it started crawling up his shoulder did someone gently poke it and we watched it fly away.</p>
+                <img src="images/picnic-full.jpg" alt="people at a picnic table making sandwiches" width="500">
+                <button class="close">go back</button>
+            </article>
+        </div>
+
+        <div id="ol-two" class="overlay hidden">
+            <article>
+                <h2>out on the lake</h2>
+                <p>our go-to spot to camp is sugar pine point in lake tahoe. it's about a 5 minute drive from the lake itself. the bottom picture is my brother and i hanging out in our trusty yellow tube. the water is always so cold. in the top photo, i went far out by the buoy. i had to go back because i get freaked out being in deep water. when you look down, the water is so clear you can see all the way to the bottom.</p>
+                <img src="images/tube-full.jpg" alt="kids in a tube on the lake" width="400">
+                <button class="close">go back</button>
+            </article>
+        </div>
+
+        <div id="ol-three" class="overlay hidden">
+            <article>
+                <h2>first bear encounter!</h2>
+                <p>this is a different bear from the photo because we saw two bears that day, a little black one and a big brown one. this guy walked right behind our tents as we were packing up to leave that morning. i love bears, but i got a little nervous. we were worried about him being so close to the road. thankfully, a park ranger showed up shortly after and the bear got to a nice, safe spot. </p>
+                <img src="images/bear-full.gif" alt="a bear" width="500">
+                <button class="close">go back</button>
+            </article>
+        </div>
+
+        <div id="ol-four" class="overlay hidden">
+            <article>
+                <h2>i wanted to be a park ranger at one point</h2>
+                <p>i don't even remember taking this photo. isn't it kind of odd that smokey bear doesn't wear a shirt but commits to pants, a belt, and a hat? </p>
+                <img src="images/smokey-full.jpg" alt="me posing with smokey bear" width="300">
+                <button class="close">go back</button>
+            </article>
+        </div>
+
+        <div id="ol-five" class="overlay hidden">
+            <article>
+                <h2>climbing this mountain</h2>
+                <p>this was a fire lookout called buck rock and it's 172 steps to get up to it. i bought a shirt to commemorate this feat. i will likely never do it again.</p>
+                <img src="images/firelookout-full.jpg" alt="a fire lookout atop a mountain" width="300">
+                <button class="close">go back</button>
+            </article>
+        </div>
+
+        <div id="ol-six" class="overlay hidden">
+            <article>
+                <h2>dinner time</h2>
+                <p>good 'ol classic hotdogs. never gets old. </p>
+                <img src="images/firepit-full.jpg" alt="my family cooking hot dogs around a firepit" width="500">
+                <button class="close">go back</button>
+            </article>
+        </div>
+
+        <div id="ol-seven" class="overlay hidden">
+            <article>
+                <h2>evidence</h2>
+                <p>what am i pointing at you may ask? i believe it was paw prints left by a raccoon. exciting stuff! that's my mom in the back sporting pink llama(?) pajama pants.</p>
+                <img src="images/pawprints-full.jpg" alt="me pointing out some paw prints i found on a table at night" width="500">
+                <button class="close">go back</button>
             </article>
         </div>
 
     </main>
+
+    <div id="preloader">
+        <div>Creating map...</div>
+    </div>
 
     <footer>
         <p>coded by <a href="../../index.html">karley makar</a></p>
