@@ -1,0 +1,378 @@
+/* -------------- general ------------ */
+
+* {
+    box-sizing:border-box;
+}
+
+img {
+    display:block;
+}
+
+html {
+    background-image: linear-gradient(#38A04F, #09063E);
+}
+
+header {
+    margin:auto;
+    position:relative;
+}
+
+h1 {
+    position:absolute;
+    top:345px;
+    text-align:center;
+    line-height:0.9em;
+    left:187px;
+    font-family: "Fraunces";
+    color:#8A4547;
+}
+
+h3{
+    font-family: "double-pica";
+    position:absolute;
+    top:250px;
+    right:30px;
+    color:darkgreen;
+}
+
+body {
+    max-width:1200px;
+    margin: auto;
+    background-image:url(images/background.jpg);
+    height:2700px;
+    overflow-y:scroll;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+main {
+    height:100%;
+    position:relative;
+    max-width:1200px;
+    margin:auto;
+}
+
+footer {
+    margin-top:-70px;
+    margin-left:20px;
+    font-family: "Fraunces";
+    color:white;
+    z-index:3;
+    opacity:0.4;
+}
+
+footer a {
+    color:orange;
+}
+
+/* ------------- horizon css ------------ */
+
+#daysky {
+    position:fixed;
+    top:0px;
+    z-index: 1;
+    box-shadow:
+    0 0 60px 30px #38A04F;
+    opacity:1;
+}
+
+#day {
+    position:fixed;
+    top:25px;
+    z-index:3;
+}
+
+#sun {
+    position:fixed;
+    z-index:2;
+    left:50%;
+    top:1px;
+    transform: scale(1);
+    transform: translate(-50%);
+    transition: top 2s ease;
+}
+
+#moon {
+    position:fixed;
+    z-index:2;
+    left:50%;
+    top:100px;
+    transform: scale(1);
+    transform: translate(-50%);
+    transition: top 2s ease;
+}
+
+#nightsky {
+    position:fixed;
+    top:0px;
+    z-index: 1;
+    transition: opacity 2s ease;
+    box-shadow:
+    0 0 60px 30px #1b3b44,
+    0 0 100px 60px #12282e;
+    opacity:0;
+}
+
+#night {
+    position:fixed;
+    opacity:0;
+    top:25px;
+    transition: opacity 2s ease;
+    z-index:3;
+}
+
+/* ---------------- all of the images and their positions ---------- */
+
+/* picnic table */
+#one {
+    position:absolute;
+    top:400px;
+    right:0px;
+}
+
+#grass1 {
+    position:absolute;
+    top:490px;
+    right:0px;
+}
+
+#treebush {
+    position:absolute;
+    right:-20px;
+    top:1100px;
+}
+
+/* tube on the lake */
+#two {
+    position:absolute;
+    left:30px;
+    top:1100px;
+}
+
+/* bear */
+#three {
+    position: absolute;
+    top:1400px;
+    right:160px;
+}
+
+/* smokey the bear */
+#four {
+    position:absolute;
+    top:1200px;
+    left:390px;
+}
+
+#grass2 {
+    position:absolute;
+    top:1350px;
+    left:-10px;
+}
+
+/* fire lookout on mountain */
+#five {
+    position:absolute;
+    top:1500px;
+    left:0px;
+}
+
+#grass3 {
+    position:absolute;
+    top:1900px;
+    right:-20px;
+}
+
+#treebush2 {
+    position:absolute;
+    top:1900px;
+    left:0px;
+}
+
+/* cooking hotdogs around the firepit */
+#six {
+    position:absolute;
+    top:2300px;
+    left:500px;
+    opacity:0.6;
+}
+
+/* pointing out pawprints */
+#seven {
+    position:absolute;
+    top:2000px;
+    right:50px;
+    opacity:0.7;
+}
+
+#fire {
+    position:absolute;
+    top:2480px;
+    left:310px;
+    filter: drop-shadow(0 0 10px orange);
+}
+
+#flashlight-off {
+    position:absolute;
+    top:2200px;
+    right:150px;
+}
+
+#flashlight-on {
+    position:absolute;
+    top:2203px;
+    right:46px;
+}
+
+#flashlight-on p {
+    color:navy;
+    font-family: "double-pica";
+    font-size:25px;
+    position:absolute;
+    bottom:90px;
+    right:155px;
+    transform: rotate(-30deg);
+    width:50px;
+    text-align:center;
+}
+
+#flashlight-off:hover, #flashlight-on:hover {
+    cursor:pointer;
+}
+
+/* ------------- overlay styling ---------- */
+
+.overlay {
+    position:fixed;
+    background-color: rgba(0,0,0,0.5);
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    z-index:4;
+    transition-property: visibility, opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.overlay article {
+    margin:auto;
+    background-color:rgb(255, 243, 225);
+    padding:20px;
+    width:50vw;
+    height:90vh;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius:20px;
+    text-align:center;
+}
+
+.overlay img {
+    margin:auto;
+    padding-bottom:35px;
+}
+
+.overlay h2 {
+    text-align:center;
+    font-family: "Fraunces";
+}
+
+.overlay button {
+    margin:auto;
+    cursor:pointer;
+    font-family: "double-pica";
+    padding:10px;
+    background-color:white;
+}
+
+.overlay button:hover {
+    background-color:darkgreen;
+    color:white;
+}
+
+.overlay p {
+    margin:auto;
+    padding-bottom:20px;
+    width:500px;
+    font-family: "double-pica";
+    line-height:1.4em;
+    text-align:left;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* ------------ making images move on hover ----------- */
+
+.picture {
+    position:relative;
+}
+
+.picture:hover {
+    z-index:4;
+}
+
+.picture img:hover {
+    filter:saturate(2.3);
+    cursor:zoom-in;
+    transform: scale(1.03);
+    z-index:3;
+    opacity:1;
+}
+
+/* --------------- slow blur show when loading ----------- */
+
+section {
+    filter:blur(3px);
+    opacity:0.4;
+    transition: filter 2s ease;
+}
+.show {
+    filter:blur(0px);
+    opacity:1;
+    transition: filter 2s ease;
+}
+
+#preloader{
+    z-index:5;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+    background-color:greenyellow;
+	color: navy;
+    font-family: "double-pica";
+	font-size: 3em;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.fadeout {
+	animation-name: fadeout;
+	animation-duration: 3s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes fadeout {
+	0%{
+		opacity: 1;
+	}
+    50% {
+        opacity: 1;
+    }
+	100% {
+		opacity: 0;
+	}
+}
