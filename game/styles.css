@@ -1,0 +1,21 @@
+* {
+    box-sizing:border-box;
+}
+
+img {
+    display:block;
+    margin:auto;
+    padding-bottom:10px;
+}
+
+html {
+    background-image: url(images/hip-square.jpg);
+}
+
+h1 {
+    font-family: "Faculty Glyphic";
+    text-align:center;
+    color:navy;
+    font-size: 32px;
+    margin-bottom:80px;
+}
