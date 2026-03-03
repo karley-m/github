@@ -104,7 +104,7 @@ footer a {
 
 #nightsky {
     position:fixed;
-    top:0px;
+    top:-1px;
     z-index: 1;
     transition: opacity 2s ease;
     box-shadow:
@@ -126,7 +126,7 @@ footer a {
 /* picnic table */
 #one {
     position:absolute;
-    top:400px;
+    top:390px;
     right:0px;
 }
 
@@ -215,6 +215,7 @@ footer a {
     position:absolute;
     top:2200px;
     right:150px;
+    animation: shake 3s linear infinite;
 }
 
 #flashlight-on {
@@ -237,6 +238,30 @@ footer a {
 
 #flashlight-off:hover, #flashlight-on:hover {
     cursor:pointer;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0);
+      }
+      15% {
+        transform: rotate(-15deg);
+      }
+      20% {
+        transform: rotate(10deg);
+      }
+      25% {
+        transform: rotate(-10deg);
+      }
+      30% {
+        transform: rotate(6deg);
+      }
+      35% {
+        transform: rotate(-4deg);
+      }
+      40%{
+        transform: rotate(0);
+      }
 }
 
 /* ------------- overlay styling ---------- */
@@ -283,12 +308,13 @@ footer a {
     cursor:pointer;
     font-family: "double-pica";
     padding:10px;
-    background-color:white;
+    background-color:darkgreen;
+    color:white;
 }
 
 .overlay button:hover {
-    background-color:darkgreen;
-    color:white;
+    background-color:white;
+    color:darkgreen;
 }
 
 .overlay p {
@@ -297,7 +323,7 @@ footer a {
     width:500px;
     font-family: "double-pica";
     line-height:1.4em;
-    text-align:left;
+    text-align:center;
 }
 
 .hidden {
@@ -323,7 +349,7 @@ footer a {
 
 .picture img:hover {
     filter:saturate(2.3);
-    cursor:zoom-in;
+    cursor:pointer;
     transform: scale(1.03);
     z-index:3;
     opacity:1;
@@ -376,3 +402,5 @@ section {
 		opacity: 0;
 	}
 }
+
+
