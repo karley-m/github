@@ -1,0 +1,70 @@
+* {
+    box-sizing:border-box;
+}
+
+img {
+    display:block;
+    margin:auto;
+}
+
+html {
+    background-image: url(images/intro-background.jpg);
+    background-size:cover;
+}
+
+body {
+    margin: auto;
+    color: #4A3114;
+}
+
+header {
+    padding-top:100px;
+    margin:auto;
+}
+
+header img {
+    margin:0;
+    height:100%;
+    width:100px;
+    padding-top:20px;
+}
+
+header div {
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+h1 {
+    font-family: 'Rotunda Veneta';
+    font-size: 130px;
+    text-align:center;
+    margin:0 0 0 0;
+}
+
+h2 {
+    font-family: 'Rotunda Veneta';
+    font-size:25px;
+    text-align:center;
+    margin-top:0px;
+}
+
+#startpage {
+    font-family: 'Fraunces';
+    margin:auto;
+    width:380px;
+}
+
+#startbutton {
+    margin:auto;
+    padding:5px 20px 5px 20px;
+    background-color:orange;
+    margin-left:50%;
+    outline-color:#4A3114;
+}
+
+#startbutton:hover {
+    background-color:#4A3114;
+    color:orange;
+    cursor:pointer;
+}
