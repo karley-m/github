@@ -156,6 +156,10 @@ h2 {
     right:220px;
 }
 
+.next:hover, .previous:hover {
+    cursor:pointer;
+}
+
 #player1options img {
     position:absolute;
     bottom:213px;
@@ -303,6 +307,22 @@ h3 {
     animation: moveAndFlip1 1s ease forwards;
 }
 
+.moveBack1 {
+    position:absolute;
+    left:100px;
+    bottom:103px;
+    transition: transform 1s ease;
+    visibility:hidden;
+}
+
+.moveBack2 {
+    position:absolute;
+    right:100px;
+    bottom:103px;
+    transition: transform 1s ease;
+    visibility:hidden;
+}
+
 .move2 {
     /* transform: translate(-255px, -230px); */
     animation: moveAndFlip2 1s ease forwards;
@@ -409,6 +429,15 @@ h3 {
         transform: translateX(700px) rotateY(180deg);
         opacity:0;
     }
+}
+
+#update-roundwin {
+    font-family: 'Fraunces';
+    font-size:24px;
+    color:#e0d5b1;
+    position:absolute;
+    left:440px;
+    bottom:50px;
 }
 
 

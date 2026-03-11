@@ -26,6 +26,10 @@
 
     const roundCount = document.querySelector('#round-count');
     const updateRoundWin = document.querySelector('#update-roundwin');
+    const score1 = document.querySelector('#score1');
+    const score2 = document.querySelector('#score2');
+
+    
     
     const gameData = {
         cards: [
@@ -181,22 +185,34 @@
     document.querySelector('#flip').addEventListener('click', moveCards);
     
     function moveCards(){
-        playCard1.style.visibility = 'visible';
-        playCard2.style.visibility = 'visible';
+        resetCards();
+        gameData.round++;
 
-        playCard1.className = 'move1';
-        playCard2.className = 'move2';
+        setTimeout(function(){
+            playCard1.style.visibility = 'visible';
+            playCard2.style.visibility = 'visible';
 
-        front1.classList.remove('flipFront','collect1','collect2');
-        front2.classList.remove('flipFront','collect1','collect2');
+            playCard1.className = 'move1';
+            playCard2.className = 'move2';
 
-        flipCards();
+            front1.classList.remove('flipFront','collect1','collect2');
+            front2.classList.remove('flipFront','collect1','collect2');
+
+            flipCards();
+        }, 1000);
     }
+
+    function resetCards(){
+        playCard1.className = 'moveBack1';
+        playCard2.className = 'moveBack2';
+        updateRoundWin.innerHTML = '';
+    };
 
     
 
     function flipCards(){
-        roundCount.innerHTML = `Round ${gameData.round+1}`;
+        roundCount.innerHTML = `Round ${gameData.round}`;
+        
         
         gameData.draw1 = Math.floor(Math.random() * gameData.cards.length);
         gameData.draw2 = Math.floor(Math.random() * gameData.cards.length);
@@ -207,7 +223,8 @@
         front1.classList.add('flipFront');
         front2.classList.add('flipFront');
 
-        gameData.drawSum = gameData.draw1 + gameData.draw2;
+        // gameData.drawSum = gameData.draw1 + gameData.draw2;
+        gameData.drawSum = gameData.cards[gameData.draw1].value + gameData.cards[gameData.draw2].value;
 
         console.log(gameData.drawSum);
         console.log('p1', gameData.cards[gameData.draw1].value);
@@ -220,19 +237,30 @@
                 setTimeout(function(){
                     moveCards1();
                 }, 1000);
+
+                gameData.score[0] += gameData.drawSum;
+                updateRoundWin.innerHTML = 'Player 1 drew the higher card!';
+                score1.innerHTML = `Score: ${gameData.score[0]}`;
             }
 
             // if player 2's card is higher
             if ((gameData.cards[gameData.draw1].value) < (gameData.cards[gameData.draw2].value)) {
                 console.log('player 2 won this round with points!');
-                moveCards2();
+                setTimeout(function(){
+                    moveCards2();
+                }, 1000);
+
+                gameData.score[1] += gameData.drawSum;
+                updateRoundWin.innerHTML = 'Player 2 drew the higher card!';
+                score2.innerHTML = `Score: ${gameData.score[1]}`;
             }
 
             // if the player's cards are equal
             if ((gameData.cards[gameData.draw1].value) == (gameData.cards[gameData.draw2].value)) {
                 console.log('war!!!!');
+                updateRoundWin.innerHTML = "War! Click 'Flip Cards' again!";
             }
-        }, 2000);
+        }, 1000);
         
     }
 
