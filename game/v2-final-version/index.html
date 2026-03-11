@@ -33,6 +33,7 @@
 
     <main>
 
+        <!-- section 0 -->
         <section id="startpage">
             <p>Instructions:
                 <ul>
@@ -48,6 +49,7 @@
             <p><a href="https://www.wikihow.com/Play-War-(Card-Game)">I'm still confused</a></p>
         </section>
 
+        <!-- section 01 -->
         <section class="hidden">
             <h3>Choose your avatar:</h3>
             <div id="avatarselection" >
@@ -69,21 +71,54 @@
             <button id="startbutton">Start</button>
         </section>
 
-        <section id="gameplay" class="hidden">
-            <h3>Round</h3>
+        <!-- section 02 -->
+        <section id="gameplay1" class="hidden">
+            <h3 id="round-count">Round 0</h3>
             
             <div class="deck" id="deck-container">
                 <img class="card" id="card1" src="images/card.png">
-                <img class="card" id="card1" src="images/card.png">
-                <img class="card" id="card1" src="images/card.png">
+                <img class="card" id="card2" src="images/card.png">
+                <img class="card" id="card3" src="images/card.png">
+                <img class="card" id="card4" src="images/card.png">
+                <img class="card" id="card5" src="images/card.png">
+                <img class="card" id="card6" src="images/card.png">
+
+                
             </div>
 
             <button id="shuffle">Shuffle and Split Cards</button>
 
-            <div id="game-setup">
+            <div id="player-setup">
                 <p>Player 1</p>
                 <p>Player 2</p>
             </div>
+
+            <div id="score-setup">
+                <p>Score: 0</p>
+                <p>Score: 0</p>
+            </div>
+        </section>
+
+        <!-- section 03 -->
+        <section id="gameplay2" class="hidden">
+
+            <button id="flip">Flip Cards</button>
+            <button id="giveup1">Give up?</button>
+            <button id="giveup2">Give up?</button>
+
+            <div id="goldcoins" class="hidden"></div>
+
+            <div id="playingcards">
+                <img class="card" id="playcard1" src="images/card.png">
+                <img class="card" id="playcard2" src="images/card.png">
+            </div>
+
+            <div id="front1"></div>
+            <div id="front2"></div>
+
+            <div id="update-roundwin"></div>
+
+            
 
         </section>
 
