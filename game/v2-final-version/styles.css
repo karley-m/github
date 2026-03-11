@@ -245,6 +245,14 @@ h3 {
     transform: translateX(-5px) rotate(8deg);
 }
 
+.shuffling .card:nth-child(7) {
+    transform: translateX(-5px) rotate(-8deg);
+}
+
+.shuffling .card:nth-child(8) {
+    transform: translateX(-5px) rotate(16deg);
+}
+
 .card {
     position: absolute;
     left:520px;
