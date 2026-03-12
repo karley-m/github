@@ -32,6 +32,17 @@ button:hover {
     cursor:pointer;
 }
 
+footer {
+    font-family: 'Fraunces';
+    text-align:center;
+    /* padding-top:50px; */
+    position:absolute;
+}
+
+footer a {
+    color:orange;
+}
+
 
 
 
@@ -56,7 +67,8 @@ header div {
 }
 
 h1 {
-    font-family: 'Rotunda Veneta';
+    /* font-family: 'Rotunda Veneta'; */
+    font-family: "Pirata One";
     font-size: 130px;
     text-align:center;
     margin:0 0 0 0;
@@ -64,7 +76,8 @@ h1 {
 }
 
 h2 {
-    font-family: 'Rotunda Veneta';
+    /* font-family: 'Rotunda Veneta'; */
+    font-family: "Pirata One";
     font-size:25px;
     text-align:center;
     margin-top:0px;
@@ -109,7 +122,8 @@ h2 {
 }
 
 #avatarselection p {
-    font-family: 'Rotunda Veneta';
+    /* font-family: 'Rotunda Veneta'; */
+    font-family: "Pirata One";
     font-size: 50px;
     margin:0;
     color: #4A3114;
@@ -128,32 +142,38 @@ h2 {
     text-align:center;
 }
 
+#arrows {
+    position:relative;
+}
+
 #arrow1 {
     position:absolute;
     transform:rotate(-180deg);
-    bottom:320px;
-    left:220px;
+    bottom:130px;
+    left:17%;
     visibility:hidden;
 }
 
 #arrow2 {
     position:absolute;
-    bottom:320px;
+    bottom:130px;
+    left:45%;
     left:530px;
+
 }
 
 #arrow3 {
     position:absolute;
     transform:rotate(-180deg);
-    bottom:320px;
-    right:530px;
+    bottom:130px;
+    right:45%;
     visibility:hidden;
 }
 
 #arrow4 {
     position:absolute;
-    bottom:320px;
-    right:220px;
+    bottom:130px;
+    right:17%;
 }
 
 .next:hover, .previous:hover {
@@ -162,13 +182,13 @@ h2 {
 
 #player1options img {
     position:absolute;
-    bottom:213px;
+    bottom:220px;
     left:270px;
 }
 
 #player2options img {
     position:absolute;
-    bottom:210px;
+    bottom:220px;
     right:270px;
 }
 
@@ -180,19 +200,22 @@ h2 {
 #shuffle {
     position:absolute;
     bottom:130px;
-    left:-90px;
+    /* left:-90px; */
+    left:-2.5%;
     font-size: 25px;
     font-family:'Fraunces';
 }
 
 #gameplay1 {
     color:#e0d5b1;
-    font-family: 'Rotunda Veneta';
+    /* font-family: 'Rotunda Veneta'; */
+    font-family: "Pirata One";
     font-size:40px;
 }
 
 h3 {
-    font-family: 'Rotunda Veneta';
+    /* font-family: 'Rotunda Veneta'; */
+    font-family: "Pirata One";
     font-size:64px;
     text-align:center;
     color: #4A3114;
@@ -255,7 +278,8 @@ h3 {
 
 .card {
     position: absolute;
-    left:520px;
+    /* left:560px; */
+    left:43.2%;
     top:10px;
     transition: transform 0.6s ease;
 }
@@ -275,8 +299,15 @@ h3 {
 #flip {
     position:absolute;
     bottom:150px;
-    left:-10px;
+    left:3.5%;
     font-size:25px;
+}
+
+#flip:disabled {
+    background-color: #ccc;   
+    color: #666;
+    cursor: not-allowed;      
+    opacity: 0.6;             
 }
 
 #giveup1 {
@@ -549,6 +580,9 @@ h3 {
     0% {
         transform: translateX(150px) translateY(-230px) rotateY(0deg);
         opacity:1;
+    } 99% {
+        transform: translateX(150px) translateY(-230px) rotateY(180deg);
+        opacity:0;
     } 100% {
         transform: translateX(150px) translateY(-230px) rotateY(180deg);
         opacity:0;
@@ -559,6 +593,9 @@ h3 {
     0% {
         transform: translateX(-150px) translateY(-230px) rotateY(0deg);
         opacity:1;
+    } 99% {
+        transform: translateX(-150px) translateY(-230px) rotateY(180deg);
+        opacity:0;
     } 100% {
         transform: translateX(-150px) translateY(-230px) rotateY(180deg);
         opacity:0;
@@ -569,6 +606,9 @@ h3 {
     0% {
         transform: translateX(50px) translateY(-230px) rotateY(0deg);
         opacity:1;
+    } 99% {
+        transform: translateX(50px) translateY(-230px) rotateY(180deg);
+        opacity:0;
     } 100% {
         transform: translateX(50px) translateY(-230px) rotateY(180deg);
         opacity:0;
@@ -579,6 +619,9 @@ h3 {
     0% {
         transform: translateX(-50px) translateY(-230px) rotateY(0deg);
         opacity:1;
+    } 99% {
+        transform: translateX(-50px) translateY(-230px) rotateY(180deg);
+        opacity:0;
     } 100% {
         transform: translateX(-50px) translateY(-230px) rotateY(180deg);
         opacity:0;
@@ -674,6 +717,71 @@ h3 {
 
 .warSlide2{
     animation: warSlide2 0.6s forwards;
+}
+
+#treasures {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+}
+
+#treasure1{
+    position:absolute;
+    top:-300px;
+}
+
+#treasure2{
+    position:absolute;
+    top:-300px;
+}
+
+#treasure3{
+    position:absolute;
+    top:-300px;
+}
+
+#treasure4{
+    position:absolute;
+    top:-300px;
+}
+
+#double-war-overlay, #winner {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+    color: white;
+  }
+
+  #double-war-content h2, #winner-content h2 {
+    color:#e0d5b1;
+  }
+
+  #double-war-content button, #winner-content button {
+    margin: 10px;           
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+  #double-war-content, #winner-content {
+    text-align: center;
+    background: #222;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center; 
+}
+
+#winner-avatar {
+    background-color:white;
 }
 
 
