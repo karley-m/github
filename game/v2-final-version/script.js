@@ -21,8 +21,17 @@
 
     const playCard1 = document.querySelector('#playcard1');
     const playCard2 = document.querySelector('#playcard2');
+    const playCard1WarA = document.querySelector('#playCard1War-A');
+    const playCard2WarA = document.querySelector('#playCard2War-A');
+    const playCard1WarB = document.querySelector('#playCard1War-B');
+    const playCard2WarB = document.querySelector('#playCard2War-B');
+
     const front1 = document.querySelector('#front1');
     const front2 = document.querySelector('#front2');
+    const front1A = document.querySelector('#front1A');
+    const front2A = document.querySelector('#front2A');
+    const front1B = document.querySelector('#front1B');
+    const front2B = document.querySelector('#front2B');
 
     const roundCount = document.querySelector('#round-count');
     const updateRoundWin = document.querySelector('#update-roundwin');
@@ -55,11 +64,9 @@
         draw2: 0,
         drawSum: 0,
         index: 0,
-        gameEnd:190 
+        war: false,
+        warPile: [] 
     };
-
-    const card1 = gameData.player1Deck.shift();
-    const card2 = gameData.player2Deck.shift();
     
     // ------------- switching from start screen to avatar selection screen --------------
     document.querySelector('#gotoavatar').addEventListener ('click', function(event){
@@ -213,7 +220,16 @@
 
 
     // --------------- when clicking flip, moveCards --> flipCards triggers ---------------
-    document.querySelector('#flip').addEventListener('click', moveCards);
+    document.querySelector('#flip').addEventListener('click', function(){
+        const flipButton = document.querySelector('#flip');
+        flipButton.disabled = true;
+
+        if(gameData.war) {
+            handleWar();
+        } else {
+            moveCards();
+        }
+    });
     
     function moveCards(){
         resetCards();
@@ -230,7 +246,7 @@
             front2.classList.remove('flipFront','collect1','collect2');
 
             flipCards();
-        }, 1000);
+        }, 500);
     }
 
     function resetCards(){
@@ -243,32 +259,28 @@
 
     function flipCards(){
         roundCount.innerHTML = `Round ${gameData.round}`;
+
+        console.log("Top card P1:", gameData.player1Deck[0]); 
+        console.log("Top card P2:", gameData.player2Deck[0]);
         
         const card1 = gameData.player1Deck.shift();
         const card2 = gameData.player2Deck.shift();
-        
-        // gameData.draw1 = Math.floor(Math.random() * gameData.cards.length);
-        // gameData.draw2 = Math.floor(Math.random() * gameData.cards.length);
+
+        updateDeckVisibility();
 
         front1.innerHTML = `<img src="images/${card1.img}">`;
         front2.innerHTML = `<img src="images/${card2.img}">`;
-        // front1.innerHTML = `<img src="images/${gameData.cards[gameData.draw1].img}">`;
-        // front2.innerHTML = `<img src="images/${gameData.cards[gameData.draw2].img}">`;
-
+        
         front1.classList.add('flipFront');
         front2.classList.add('flipFront');
 
-        gameData.drawSum = card1.value + card2.value;
-        // gameData.drawSum = gameData.cards[gameData.draw1].value + gameData.cards[gameData.draw2].value;
+        // gameData.warPile.push(card1, card2);
 
+        gameData.drawSum = card1.value + card2.value;
 
         console.log('drawsum:',gameData.drawSum);
-        console.log('p1 card value:', card1.value);
-        console.log('p2 card value:', card2.value);
-
-        // console.log("After draw:");
-        // console.log("P1:", gameData.player1Deck.length);
-        // console.log("P2:", gameData.player2Deck.length);
+        console.log('p1 drawn card:', card1.value);
+        console.log('p2 drawn card:', card2.value);
 
         setTimeout(function(){
             // if player 1's card is higher
@@ -281,9 +293,6 @@
                 gameData.score[0] += gameData.drawSum;
                 updateRoundWin.innerHTML = 'Player 1 drew the higher card!';
                 score1.innerHTML = `Score: ${gameData.score[0]}`;
-
-                gameData.player1Deck.push(card1);
-                gameData.player1Deck.push(card2);
 
                 checkGameEnd();
             }
@@ -299,51 +308,196 @@
                 updateRoundWin.innerHTML = 'Player 2 drew the higher card!';
                 score2.innerHTML = `Score: ${gameData.score[1]}`;
 
-                gameData.player2Deck.push(card1);
-                gameData.player2Deck.push(card2);
-
                 checkGameEnd();
             }
 
             // if the player's cards are equal
             if (card1.value === card2.value) {
                 console.log('war!!!!');
-                updateRoundWin.innerHTML = "War! Click 'Flip Cards' again!";
+                gameData.war = true;
+
+                gameData.warPile.push(card1, card2);
+
+                updateRoundWin.innerHTML = "War! Flip again!";
             }
 
             console.log("After round:");
             console.log("P1:", gameData.player1Deck.length);
             console.log("P2:", gameData.player2Deck.length);
         }, 1000);
+
+        setTimeout(function(){
+            const flipButton = document.querySelector('#flip');
+            flipButton.disabled = false;
+        
+        }, 2500);
         
     }
 
     function checkGameEnd(){
-        if(gameData.player1Deck.length === 0){
-            updateRoundWin.innerHTML = "Player 2 wins the game!";
-            document.querySelector('#flip').style.display = 'none';
-        };
-
-        if(gameData.player2Deck.length === 0){
-            updateRoundWin.innerHTML = "Player 1 wins the game!";
+        if(gameData.player1Deck.length === 0 && gameData.player2Deck.length === 0) {
+            if(gameData.score[0] > gameData.score[1]){
+                updateRoundWin.innerHTML = "Player 1 wins the game!";
+            } else if (gameData.score[1] > gameData.score[0]) {
+                updateRoundWin.innerHTML = "Player 2 wins the game!";
+            } else {
+                updateRoundWin.innerHTML = "It's a draw!";
+            }
             document.querySelector('#flip').style.display = 'none';
         }
+        
     }
 
     function moveCards1(){
         console.log("moving cards to player 1");
         front1.classList.add('collect1');
         front2.classList.add('collect1');
+        if(gameData.war) {
+            front1A.classList.add('collect1');
+            front2A.classList.add('collect1');
+            front1B.classList.add('collect1');
+            front2B.classList.add('collect1');
+        };
     }
 
     function moveCards2(){
         console.log("moving cards to player 2");
         front1.classList.add('collect2');
         front2.classList.add('collect2');
+        if (gameData.war) {
+            front1A.classList.add('collect2');
+            front2A.classList.add('collect2');
+            front1B.classList.add('collect2');
+            front2B.classList.add('collect2');
+        };
+    }
+
+    function handleWar(){
+
+        if(gameData.player1Deck.length < 2 && gameData.score[1] > gameData.score[0]) {
+            updateRoundWin.innerHTML = 'player 2 wins with the higher score! not enough cards were left';
+            document.querySelector('#flip').style.display = 'none';
+            return;
+        };
+
+        if(gameData.player2Deck.length < 2 && gameData.score[0] > gameData.score[1]) {
+            updateRoundWin.innerHTML = 'player 1 wins with the higher score! not enough cards were left';
+            document.querySelector('#flip').style.display = 'none';
+            return;
+        };
+
+        const down1 = gameData.player1Deck.shift();
+        const down2 = gameData.player2Deck.shift();
+
+        const up1 = gameData.player1Deck.shift();
+        const up2 = gameData.player2Deck.shift();
+
+        updateDeckVisibility();
+
+        gameData.warPile.push(down1, down2, up1, up2);
+
+
+
+        //class logic here
+        setTimeout(function(){
+            playCard1WarA.style.visibility = 'visible';
+            playCard2WarA.style.visibility = 'visible';
+
+            playCard1WarA.className = 'move1A';
+            playCard2WarA.className = 'move2A';
+
+            setTimeout(function(){
+                playCard1WarB.style.visibility = 'visible';
+                playCard2WarB.style.visibility = 'visible';
+
+                playCard1WarB.className = 'move1B';
+                playCard2WarB.className = 'move2B';
+
+                setTimeout(function(){
+                    
+                    playCard1WarB.classList.add('backCardFlip1B');
+                    playCard2WarB.classList.add('backCardFlip2B');
+
+                    front1B.innerHTML = `<img src="images/${up1.img}">`;
+                    front2B.innerHTML = `<img src="images/${up2.img}">`;
+
+                    front1B.className = 'flipFront';
+                    front2B.className = 'flipFront';
+
+                    setTimeout(function(){
+                        
+                        playCard1WarA.classList.add('backCardFlip1A');
+                        playCard2WarA.classList.add('backCardFlip2A');
+
+                        front1A.innerHTML = `<img src="images/${down1.img}">`;
+                        front2A.innerHTML = `<img src="images/${down2.img}">`;
+
+                        front1A.className = 'flipFront';
+                        front2A.className = 'flipFront';
+
+                        setTimeout(function(){
+                            resolveWar(up1,up2);
+                        },3000)
+                        
+                    },500);
+                },500);
+            },500);
+        },500);
+
+        
+    }
+
+    function resolveWar(up1, up2) {
+
+        if(up1.value > up2.value){
+            moveCards1();
+            gameData.player1Deck.push(...gameData.warPile);
+
+            updateRoundWin.innerHTML = "player 1 wins the war!";
+            
+        } else if (up1.value < up2.value) {
+            moveCards2();
+            gameData.player2Deck.push(...gameData.warPile);
+
+            updateRoundWin.innerHTML = 'player 2 wins the war!';
+            
+        } else {
+            updateRoundWin.innerHTML = 'double war!';
+            return;
+            //show pop up overlay saying, uh oh... ro sham bo to see who wins. click button for who won and give their score 100 points
+        }
+
+        gameData.warPile = [];
+        gameData.war = false;
+
+        const flipButton = document.querySelector('#flip');
+        flipButton.style.display = 'block';
+        flipButton.disabled = false;
+
+        checkGameEnd();
+    }
+
+    function updateDeckVisibility(){
+
+        if(gameData.player1Deck.length < 1){
+            cards[0].style.visibility = "hidden";
+            cards[1].style.visibility = "hidden";
+            cards[2].style.visibility = "hidden";
+            cards[6].style.visibility = "hidden";
+        }
+    
+        if(gameData.player2Deck.length < 1){
+            cards[3].style.visibility = "hidden";
+            cards[4].style.visibility = "hidden";
+            cards[5].style.visibility = "hidden";
+            cards[7].style.visibility = "hidden";
+        }
+    
     }
 
     console.log("P1 deck:", gameData.player1Deck.length);
     console.log("P2 deck:", gameData.player2Deck.length);
+    console.log("war pile:", gameData.warPile);
     
 
 

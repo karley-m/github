@@ -295,6 +295,7 @@ h3 {
     position:relative;
 }
 
+
 #playcard1 {
     position:absolute;
     left:100px;
@@ -311,8 +312,64 @@ h3 {
     visibility:hidden;
 }
 
+#playCard1War-A {
+    visibility: hidden;
+    position: absolute; 
+    left:100px;
+    bottom:103px;
+    z-index: 2; 
+    transition:transform opacity 1s ease forwards;
+}
+
+#playCard2War-A {
+    visibility: hidden;
+    position: absolute; 
+    right:100px;
+    bottom:103px;
+    z-index: 2; 
+    transition:transform opacity 1s ease forwards;
+}
+
+#playCard1War-B {
+    visibility: hidden;
+    position: absolute; 
+    left:100px;
+    bottom:103px;
+    z-index: 3; 
+    transition:transform opacity 1s ease forwards;
+}
+
+#playCard2War-B {
+    visibility: hidden;
+    position: absolute; 
+    right:100px;
+    bottom:103px;
+    z-index: 3; 
+    transition:transform opacity 1s ease forwards;
+}
+
 .move1 {
     animation: moveAndFlip1 1s ease forwards;
+}
+
+.move2 {
+    animation: moveAndFlip2 1s ease forwards;
+}
+
+.move1A {
+    animation: moveWar1A 1s ease forwards;
+}
+
+.move2A {
+    animation: moveWar2A 1s ease forwards;
+}
+
+.move1B {
+    animation: moveWar1B 1s ease forwards;
+}
+
+.move2B {
+    animation: moveWar2B 1s ease forwards;
 }
 
 .moveBack1 {
@@ -331,11 +388,6 @@ h3 {
     visibility:hidden;
 }
 
-.move2 {
-    /* transform: translate(-255px, -230px); */
-    animation: moveAndFlip2 1s ease forwards;
-}
-
 .flipFront {
     animation: frontCardFlip 1s ease forwards;
 }
@@ -348,10 +400,42 @@ h3 {
     transition: transform 1s ease;
 }
 
+#front1A {
+    position:absolute;
+    left:250px;
+    bottom:330px;
+    transform: rotateY(-180deg);
+    transition: transform 1s ease;
+}
+
+#front1B {
+    position:absolute;
+    left:150px;
+    bottom:330px;
+    transform: rotateY(-180deg);
+    transition: transform 1s ease;
+}
+
 #front2 {
     position:absolute;
     right:350px;
     bottom:330px;
+    transform: rotateY(-180deg);
+    transition: transform 1s ease;
+}
+
+#front2A {
+    position:absolute;
+    right:250px;
+    bottom:330px;
+    transform: rotateY(-180deg);
+    transition: transform 1s ease;
+}
+
+#front2B {
+    position:absolute;
+    right:150px;
+    bottom:333px;
     transform: rotateY(-180deg);
     transition: transform 1s ease;
 }
@@ -394,6 +478,42 @@ h3 {
     }
 }
 
+@keyframes moveWar1A {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(150px) translateY(-230px)
+    }
+}
+
+@keyframes moveWar2A {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(-150px) translateY(-230px)
+    }
+}
+
+@keyframes moveWar1B {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(50px) translateY(-230px);
+    }
+}
+
+@keyframes moveWar2B {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(-50px) translateY(-230px);
+    }
+}
+
 @keyframes frontCardFlip {
     0% {
         transform: rotateY(-180deg);
@@ -406,6 +526,62 @@ h3 {
     100% {
         transform: rotateY(0deg);
         opacity:1
+    }
+}
+
+.backCardFlip1A {
+    animation: backCardFlip1A 1s ease forwards;
+}
+
+.backCardFlip2A {
+    animation: backCardFlip2A 1s ease forwards;
+}
+
+.backCardFlip1B {
+    animation: backCardFlip1B 1s ease forwards;
+}
+
+.backCardFlip2B {
+    animation: backCardFlip2B 1s ease forwards;
+}
+
+@keyframes backCardFlip1A {
+    0% {
+        transform: translateX(150px) translateY(-230px) rotateY(0deg);
+        opacity:1;
+    } 100% {
+        transform: translateX(150px) translateY(-230px) rotateY(180deg);
+        opacity:0;
+    }
+}
+
+@keyframes backCardFlip2A {
+    0% {
+        transform: translateX(-150px) translateY(-230px) rotateY(0deg);
+        opacity:1;
+    } 100% {
+        transform: translateX(-150px) translateY(-230px) rotateY(180deg);
+        opacity:0;
+    }
+}
+
+@keyframes backCardFlip1B {
+    0% {
+        transform: translateX(50px) translateY(-230px) rotateY(0deg);
+        opacity:1;
+    } 100% {
+        transform: translateX(50px) translateY(-230px) rotateY(180deg);
+        opacity:0;
+    }
+}
+
+@keyframes backCardFlip2B {
+    0% {
+        transform: translateX(-50px) translateY(-230px) rotateY(0deg);
+        opacity:1;
+    } 100% {
+        transform: translateX(-50px) translateY(-230px) rotateY(180deg);
+        opacity:0;
     }
 }
 
@@ -448,7 +624,57 @@ h3 {
     bottom:50px;
 }
 
+@keyframes warRise1 {
+    from {
+        transform: translate(0px, 0px);
+    }
+    to {
+        transform: translate(-250px, 320px);
+    }
+}
 
+.warRise1{
+    animation: warRise1 0.6s forwards;
+}
+
+@keyframes warRise2 {
+    from {
+        transform: translate(420px, 230px);
+    }
+    to {
+        transform: translate(150px, 120px);
+    }
+}
+
+.warRise2{
+    animation: warRise2 0.6s forwards;
+}
+
+@keyframes warSlide1 {
+    from {
+        transform: translate(0px, 0px);
+    }
+    to {
+        transform: translate(180px, -230px);
+    }
+}
+
+.warSlide1{
+    animation: warSlide1 0.6s forwards;
+}
+
+@keyframes warSlide2 {
+    from {
+        transform: translate(0px, 0px);
+    }
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+
+.warSlide2{
+    animation: warSlide2 0.6s forwards;
+}
 
 
 
