@@ -11,11 +11,11 @@ img {
 html {
     background-size:cover;
     background-repeat: no-repeat;
-    background-color:navy;
+    background-color:rgb(4, 4, 72);
 }
 
 body {
-    margin: auto;
+    margin: 0 auto;
     max-width: 1200px;
     height:750px;
     background-image: url(images/intro-background.jpg);
@@ -25,10 +25,8 @@ body {
 }
 
 button {
-    margin:auto;
     padding:5px 20px 5px 20px;
     background-color:orange;
-    margin-left:45%;
     outline-color:#4A3114;
     font-size:25px;
 }
@@ -40,7 +38,6 @@ button:hover {
 }
 
 footer {
-    /* font-family: 'Fraunces'; */
     font-family: "IM Fell English";
     /* padding-top:50px; */
     margin-top:-30px;
@@ -77,7 +74,6 @@ header div {
 }
 
 h1 {
-    /* font-family: 'Rotunda Veneta'; */
     font-family: "Pirata One";
     font-size: 130px;
     text-align:center;
@@ -86,7 +82,6 @@ h1 {
 }
 
 h2 {
-    /* font-family: 'Rotunda Veneta'; */
     font-family: "Pirata One";
     font-size:25px;
     text-align:center;
@@ -112,6 +107,11 @@ h2 {
 #startpage p a {
     padding-left:150px;
     color: #4A3114;
+}
+
+#gotoavatar {
+    margin: 0 auto;
+    display:block;
 }
 
 
@@ -147,6 +147,12 @@ h2 {
     color: #4A3114;
 }
 
+.playerselect {
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
 #player1selection, #player2selection {
     border:4px solid #4A3114;
     background-color:white;
@@ -155,44 +161,17 @@ h2 {
 }
 
 #startbutton {
-    font-size:30px;
     font-family: "IM Fell English";
-    text-align:center;
-}
-
-#arrows {
-    position:relative;
-    /* width:550px; */
 }
 
 #arrow1 {
-    position:absolute;
     transform:rotate(-180deg);
-    bottom:130px;
-    left:17%;
     visibility:hidden;
-}
-
-#arrow2 {
-    position:absolute;
-    bottom:130px;
-    left:45%;
-    left:530px;
-
 }
 
 #arrow3 {
-    position:absolute;
     transform:rotate(-180deg);
-    bottom:130px;
-    right:45%;
     visibility:hidden;
-}
-
-#arrow4 {
-    position:absolute;
-    bottom:130px;
-    right:17%;
 }
 
 .next:hover, .previous:hover {
@@ -203,12 +182,13 @@ h2 {
 
 
 
-/* ------------ section 2: game play 1 (preliminary shuffling animation ------------ */
+/* ------------ section 2: game play 1 (preliminary shuffling animation) ------------ */
 
 #shuffle {
     position:absolute;
-    bottom:130px;
-    left:-2.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 60px;
     font-size: 25px;
     font-family: "IM Fell English";
 }
@@ -217,6 +197,7 @@ h2 {
     color:#e0d5b1;
     font-family: "Pirata One";
     font-size:40px;
+    position:relative;
 }
 
 h3 {
@@ -228,6 +209,8 @@ h3 {
 
 #gameplay1 h3 {
     color:#e0d5b1;
+    margin:0;
+    padding-top:30px;
 }
 
 #player-setup {
@@ -235,7 +218,7 @@ h3 {
     justify-content:space-between;
     width:100%;
     margin-top:180px;
-    padding: 0 110px;
+    padding: 0 125px;
 }
 
 #score-setup {
@@ -244,7 +227,7 @@ h3 {
     display:flex;
     justify-content:space-between;
     width:100%;
-    margin-top:170px;
+    margin-top:190px;
     padding: 0 130px;
 }
 
@@ -282,9 +265,8 @@ h3 {
 
 .card {
     position: absolute;
-    /* left:560px; */
     left:43.2%;
-    top:10px;
+    top:75px;
     transition: transform 0.6s ease;
 }
 
@@ -302,8 +284,9 @@ h3 {
 
 #flip {
     position:absolute;
-    bottom:150px;
-    left:3.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 60px;
     font-size:25px;
 }
 
@@ -316,14 +299,16 @@ h3 {
 
 #giveup1 {
     position:absolute;
-    left:-410px;
-    bottom:-5px;
+    font-size:10px;
+    left:140px;
+    bottom:-10px;
 }
 
 #giveup2 {
     position:absolute;
-    left:430px;
-    bottom:-5px;
+    font-size:10px;
+    right:140px;
+    bottom:-10px;
 }
 
 #playcards {
@@ -663,13 +648,13 @@ h3 {
 }
 
 #update-roundwin {
-    /* font-family: 'Fraunces'; */
     font-family: "IM Fell English";
     font-size:24px;
     color:#e0d5b1;
     position:absolute;
-    left:440px;
-    bottom:50px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom:200px;
 }
 
 @keyframes warRise1 {

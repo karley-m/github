@@ -173,7 +173,7 @@
             sections[2].className = 'show';
             document.querySelector('#avatarpage').style.display = 'none';
             document.querySelector('footer').style.marginTop = '-30px';
-            header.innerHTML = `<h1>Round ${gameData.round[1]}</h1>`;
+            header.innerHTML = `<h1>Round ${gameData.round[1]} / 13</h1>`;
             h1.style.fontSize = '65px';
             h1.style.color = "#e0d5b1";
             body.style.backgroundImage = 'url(images/game-background.jpg)';
@@ -306,7 +306,7 @@
     
     // ------------- flipping the cards to reveal face card --------------
     function flipCards(){
-        roundCount.innerHTML = `Round ${gameData.round}`;
+        roundCount.innerHTML = `Round ${gameData.round} / 13`;
 
         console.log("Top card P1:", gameData.player1Deck[0]); 
         console.log("Top card P2:", gameData.player2Deck[0]);
