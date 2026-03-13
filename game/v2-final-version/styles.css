@@ -120,23 +120,24 @@ h2 {
 /* ------------ section 1: avatar selection ------------ */
 
 #avatarpage {
-    width:500px;
+    width:650px;
     margin:auto;
-    /* display:flex; */
+    place-items: center;
     flex-direction: column;
     align-content:center;
+    gap:20px;
+    column-gap:90px;
+    padding-top:20px;
+    padding-bottom:30px;
 }
 
 #avatarselection {
     margin:auto;
-    grid-template-columns: repeat(2,auto);
+    grid-template-columns: 250px 250px;
     place-items:center;
-    /* width:850px; */
-    gap:30px;
-    column-gap:90px;
-    padding-top:20px;
-    padding-bottom:30px;
-    
+    gap:20px;
+    column-gap:140px;
+    justify-content:center;
 }
 
 #avatarselection p {
@@ -161,6 +162,7 @@ h2 {
 
 #arrows {
     position:relative;
+    /* width:550px; */
 }
 
 #arrow1 {
@@ -197,17 +199,6 @@ h2 {
     cursor:pointer;
 }
 
-#player1options img {
-    position:absolute;
-    bottom:220px;
-    left:270px;
-}
-
-#player2options img {
-    position:absolute;
-    bottom:220px;
-    right:270px;
-}
 
 
 
