@@ -319,7 +319,7 @@ h3 {
 #playcard1 {
     position:absolute;
     left:100px;
-    bottom:103px;
+    bottom:95px;
     transition: transform 1s ease;
     visibility:hidden;
 }
@@ -327,7 +327,7 @@ h3 {
 #playcard2 {
     position:absolute;
     right:100px;
-    bottom:103px;
+    bottom:95px;
     transition: transform 1s ease;
     visibility:hidden;
 }
@@ -336,7 +336,7 @@ h3 {
     visibility: hidden;
     position: absolute; 
     left:100px;
-    bottom:103px;
+    bottom:95px;
     z-index: 2; 
     transition:transform 1s ease forwards;
 }
@@ -345,7 +345,7 @@ h3 {
     visibility: hidden;
     position: absolute; 
     right:100px;
-    bottom:103px;
+    bottom:95px;
     z-index: 2; 
     transition:transform 1s ease forwards;
 }
@@ -354,7 +354,7 @@ h3 {
     visibility: hidden;
     position: absolute; 
     left:100px;
-    bottom:103px;
+    bottom:95px;
     z-index: 3; 
     transition:transform 1s ease forwards;
 }
@@ -363,7 +363,7 @@ h3 {
     visibility: hidden;
     position: absolute; 
     right:100px;
-    bottom:103px;
+    bottom:95px;
     z-index: 3; 
     transition:transform 1s ease forwards;
 }
@@ -415,7 +415,7 @@ h3 {
 #front1 {
     position:absolute;
     left:350px;
-    bottom:330px;
+    bottom:315px;
     transform: rotateY(-180deg);
     transition: transform 1s ease;
 }
@@ -423,7 +423,7 @@ h3 {
 #front1A {
     position:absolute;
     left:250px;
-    bottom:330px;
+    bottom:315px;
     transform: rotateY(-180deg);
     transition: transform 1s ease;
 }
@@ -431,7 +431,7 @@ h3 {
 #front1B {
     position:absolute;
     left:150px;
-    bottom:330px;
+    bottom:315px;
     transform: rotateY(-180deg);
     transition: transform 1s ease;
 }
@@ -439,7 +439,7 @@ h3 {
 #front2 {
     position:absolute;
     right:350px;
-    bottom:330px;
+    bottom:315px;
     transform: rotateY(-180deg);
     transition: transform 1s ease;
 }
@@ -466,15 +466,15 @@ h3 {
         opacity:1;
     }
     50% {
-        transform: translateX(255px) translateY(-230px) rotateY(0deg);
+        transform: translateX(255px) translateY(-225px) rotateY(0deg);
         opacity:1;
     }
     99% {
-        transform: translateX(255px) translateY(-230px) rotateY(180deg);
+        transform: translateX(255px) translateY(-225px) rotateY(180deg);
         opacity:1;
     }
     100% {
-        transform: translateX(255px) translateY(-230px) rotateY(180deg);
+        transform: translateX(255px) translateY(-225px) rotateY(180deg);
         opacity:0;
     }
 }
@@ -485,15 +485,15 @@ h3 {
         opacity:1;
     }
     50% {
-        transform: translateX(-255px) translateY(-230px) rotateY(0deg);
+        transform: translateX(-255px) translateY(-225px) rotateY(0deg);
         opacity:1;
     }
     99% {
-        transform: translateX(-255px) translateY(-230px) rotateY(180deg);
+        transform: translateX(-255px) translateY(-225px) rotateY(180deg);
         opacity:1;
     }
     100% {
-        transform: translateX(-255px) translateY(-230px) rotateY(180deg);
+        transform: translateX(-255px) translateY(-225px) rotateY(180deg);
         opacity:0;
     }
 }
@@ -503,7 +503,7 @@ h3 {
         transform: translateX(0) translateY(0);
     }
     100% {
-        transform: translateX(150px) translateY(-230px)
+        transform: translateX(150px) translateY(-225px)
     }
 }
 
@@ -512,7 +512,7 @@ h3 {
         transform: translateX(0) translateY(0);
     }
     100% {
-        transform: translateX(-150px) translateY(-230px)
+        transform: translateX(-150px) translateY(-212px)
     }
 }
 
@@ -521,7 +521,7 @@ h3 {
         transform: translateX(0) translateY(0);
     }
     100% {
-        transform: translateX(50px) translateY(-230px);
+        transform: translateX(50px) translateY(-225px);
     }
 }
 
@@ -530,7 +530,7 @@ h3 {
         transform: translateX(0) translateY(0);
     }
     100% {
-        transform: translateX(-50px) translateY(-230px);
+        transform: translateX(-50px) translateY(-212px);
     }
 }
 
@@ -580,39 +580,39 @@ h3 {
 
 @keyframes backCardFlip2A {
     0% {
-        transform: translateX(-150px) translateY(-230px) rotateY(0deg);
+        transform: translateX(-150px) translateY(-220px) rotateY(0deg);
         opacity:1;
     } 99% {
-        transform: translateX(-150px) translateY(-230px) rotateY(180deg);
+        transform: translateX(-150px) translateY(-220px) rotateY(180deg);
         opacity:0;
     } 100% {
-        transform: translateX(-150px) translateY(-230px) rotateY(180deg);
+        transform: translateX(-150px) translateY(-220px) rotateY(180deg);
         opacity:0;
     }
 }
 
 @keyframes backCardFlip1B {
     0% {
-        transform: translateX(50px) translateY(-230px) rotateY(0deg);
+        transform: translateX(50px) translateY(-225px) rotateY(0deg);
         opacity:1;
     } 99% {
-        transform: translateX(50px) translateY(-230px) rotateY(180deg);
+        transform: translateX(50px) translateY(-225px) rotateY(180deg);
         opacity:0;
     } 100% {
-        transform: translateX(50px) translateY(-230px) rotateY(180deg);
+        transform: translateX(50px) translateY(-225px) rotateY(180deg);
         opacity:0;
     }
 }
 
 @keyframes backCardFlip2B {
     0% {
-        transform: translateX(-50px) translateY(-230px) rotateY(0deg);
+        transform: translateX(-50px) translateY(-220px) rotateY(0deg);
         opacity:1;
     } 99% {
-        transform: translateX(-50px) translateY(-230px) rotateY(180deg);
+        transform: translateX(-50px) translateY(-220px) rotateY(180deg);
         opacity:0;
     } 100% {
-        transform: translateX(-50px) translateY(-230px) rotateY(180deg);
+        transform: translateX(-50px) translateY(-220px) rotateY(180deg);
         opacity:0;
     }
 }
@@ -654,88 +654,42 @@ h3 {
     position:absolute;
     left: 50%;
     transform: translateX(-50%);
+    text-align:center;
     bottom:200px;
 }
 
-@keyframes warRise1 {
-    from {
-        transform: translate(0px, 0px);
-    }
-    to {
-        transform: translate(-250px, 320px);
-    }
-}
-
-.warRise1{
-    animation: warRise1 0.6s forwards;
-}
-
-@keyframes warRise2 {
-    from {
-        transform: translate(420px, 230px);
-    }
-    to {
-        transform: translate(150px, 120px);
-    }
-}
-
-.warRise2{
-    animation: warRise2 0.6s forwards;
-}
-
-@keyframes warSlide1 {
-    from {
-        transform: translate(0px, 0px);
-    }
-    to {
-        transform: translate(180px, -230px);
-    }
-}
-
-.warSlide1{
-    animation: warSlide1 0.6s forwards;
-}
-
-@keyframes warSlide2 {
-    from {
-        transform: translate(0px, 0px);
-    }
-    to {
-        transform: translate(0px, 0px);
-    }
-}
-
-.warSlide2{
-    animation: warSlide2 0.6s forwards;
+#gameplay2 {
+    position:relative;
 }
 
 #treasures {
-    position: fixed; 
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; 
+    pointer-events: none;
+    z-index: 0;
 }
 
-#treasure1{
-    position:absolute;
-    top:-300px;
+#treasures img {
+    opacity: 0.85;
 }
 
-#treasure2{
+#treasure1 {
     position:absolute;
-    top:-300px;
 }
 
-#treasure3{
+#treasure2 {
     position:absolute;
-    top:-300px;
 }
 
-#treasure4{
+#treasure3 {
     position:absolute;
-    top:-300px;
+}
+
+#treasure4 {
+    position:absolute;
 }
 
 #double-war-overlay, #winner {
@@ -755,11 +709,15 @@ h3 {
     color:#e0d5b1;
   }
 
-  #double-war-content button, #winner-content button {
+  #double-war-content button {
     margin: 10px;           
     padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
+}
+
+#winner-content button {
+    margin:auto;
 }
 
   #double-war-content, #winner-content {

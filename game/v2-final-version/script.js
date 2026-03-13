@@ -46,9 +46,27 @@
     const score1 = document.querySelector('#score1');
     const score2 = document.querySelector('#score2');
 
+    // ----------- treasure pictures --------------
+    const treasures = [
+        document.querySelector('#treasure1'),
+        document.querySelector('#treasure2'),
+        document.querySelector('#treasure3'),
+        document.querySelector('#treasure4')
+    ];
+    
+    const milestonePoints = [20, 40, 60, 80];
+    
+    let playerMilestones = [
+        [], // player 1
+        []  // player 2
+    ];
+
+    // ------------ sounds -----------
     const shuffleSound = new Audio('audio/shuffle.mp3');
     const cardSound = new Audio('audio/card.mp3');
     const warBell = new Audio('audio/warbell.mp3');
+
+
     
 
     // ------------- all game data -----------
@@ -339,7 +357,8 @@
                 }, 1500);
 
                 gameData.score[0] += gameData.drawSum;
-                updateRoundWin.innerHTML = 'Player 1 drew the higher card!';
+                checkTreasure(1);
+                updateRoundWin.innerHTML = '<p>Player 1 drew the higher card!</p>';
                 score1.innerHTML = `Score: ${gameData.score[0]}`;
 
                 checkGameEnd();
@@ -353,7 +372,8 @@
                 }, 1500);
 
                 gameData.score[1] += gameData.drawSum;
-                updateRoundWin.innerHTML = 'Player 2 drew the higher card!';
+                checkTreasure(2);
+                updateRoundWin.innerHTML = '<p>Player 2 drew the higher card!</p>';
                 score2.innerHTML = `Score: ${gameData.score[1]}`;
 
                 checkGameEnd();
@@ -368,8 +388,7 @@
 
                 gameData.warPile.push(card1, card2);
 
-                updateRoundWin.innerHTML = "War! Flip again!";
-                updateRoundWin.style.left = '47%';
+                updateRoundWin.innerHTML = "<p>War! Flip again!</p>";
             }
 
             console.log("After round:");
@@ -402,7 +421,7 @@
                 winnerPoints.innerHTML = `With a score of ${gameData.score[1]}`;
                 winnerAvatar.src = `images/${gameData.player2Avatar}`;
             } else {
-                updateRoundWin.innerHTML = "It's a draw!";
+                updateRoundWin.innerHTML = "<p>It's a draw!</p>";
             }
 
             winnerOverlay.className = 'show';
@@ -539,7 +558,7 @@
                         
                     },500);
                 },500);
-            },500);
+            },1000);
         },500);
 
         
@@ -562,12 +581,12 @@
         if(up1.value > up2.value){
             moveCards1();
             gameData.score[0] += sum;
-            updateRoundWin.innerHTML = "player 1 wins the war!";
+            updateRoundWin.innerHTML = "<p>player 1 wins the war!</p>";
             
         } else if (up1.value < up2.value) {
             moveCards2();
             gameData.score[1] += sum;
-            updateRoundWin.innerHTML = 'player 2 wins the war!';
+            updateRoundWin.innerHTML = '<p>player 2 wins the war!</p>';
             
         } else {
             document.querySelector('#double-war-overlay').className = 'show';
@@ -593,12 +612,12 @@
     function resolveDoubleWar(winner) {
         if(winner === 1){
             gameData.score[0] += 100;
-            updateRoundWin.innerHTML = 'Player 1 won the double war!';
+            updateRoundWin.innerHTML = '<p>Player 1 won the double war!</p>';
             moveCards1();
         } else {
             gameData.score[1] += 100;
             moveCards2();
-            updateRoundWin.innerHTML = 'Player 2 won the double war!';
+            updateRoundWin.innerHTML = '<p>Player 2 won the double war!</p>';
         }
     
         gameData.warPile = [];
@@ -607,6 +626,12 @@
     
         score1.innerHTML = `Score: ${gameData.score[0]}`;
         score2.innerHTML = `Score: ${gameData.score[1]}`;
+
+        if(gameData.player1Deck.length === 0 || gameData.player2Deck.length === 0){
+            flipButton.style.display = 'none';
+            checkGameEnd();
+            return;
+        }
     
         flipButton.disabled = false;
     }
@@ -628,6 +653,38 @@
             cards[7].style.visibility = "hidden";
         }
     
+    }
+
+    // ---------- checking for points milestones ------------
+    function checkTreasure(player) {
+        const score = gameData.score[player - 1];
+    
+        for (let i = 0; i < milestonePoints.length; i++) {
+    
+            const milestone = milestonePoints[i];
+    
+            if (score >= milestone && playerMilestones[player - 1].indexOf(i) === -1) {
+    
+                showTreasure(player, i);
+                playerMilestones[player - 1].push(i);
+            }
+        }
+    }
+
+    function showTreasure(player, index) {
+
+        const treasure = treasures[index];
+    
+        if (player === 1) {
+            treasure.style.left = "50px";
+        } else {
+            treasure.style.right = "50px";
+        }
+
+        treasure.style.top = (120 + index * 120) + "px";
+    
+        treasure.style.top = "100px";
+        treasure.classList.remove("hidden");
     }
 
     // ------------- checking which cards in are each array each game ------------
