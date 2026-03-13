@@ -9,13 +9,19 @@ img {
 }
 
 html {
-    background-image: url(images/intro-background.jpg);
     background-size:cover;
     background-repeat: no-repeat;
+    background-color:navy;
 }
 
 body {
     margin: auto;
+    max-width: 1200px;
+    height:750px;
+    background-image: url(images/intro-background.jpg);
+    background-repeat:no-repeat;
+    background-position:center;
+
 }
 
 button {
@@ -24,6 +30,7 @@ button {
     background-color:orange;
     margin-left:45%;
     outline-color:#4A3114;
+    font-size:25px;
 }
 
 button:hover {
@@ -33,14 +40,17 @@ button:hover {
 }
 
 footer {
-    font-family: 'Fraunces';
-    text-align:center;
+    /* font-family: 'Fraunces'; */
+    font-family: "IM Fell English";
     /* padding-top:50px; */
+    margin-top:-30px;
+    padding-left:10px;
     position:absolute;
 }
 
 footer a {
     color:orange;
+    opacity:0.5;
 }
 
 
@@ -89,7 +99,7 @@ h2 {
 /* ------------ section 0: start page ------------ */
 
 #startpage {
-    font-family: 'Fraunces';
+    font-family: "IM Fell English";
     margin:auto;
     width:380px;
 }
@@ -109,20 +119,27 @@ h2 {
 
 /* ------------ section 1: avatar selection ------------ */
 
+#avatarpage {
+    width:500px;
+    margin:auto;
+    /* display:flex; */
+    flex-direction: column;
+    align-content:center;
+}
+
 #avatarselection {
     margin:auto;
     grid-template-columns: repeat(2,auto);
-    width:750px;
+    place-items:center;
+    /* width:850px; */
     gap:30px;
     column-gap:90px;
     padding-top:20px;
     padding-bottom:30px;
-    align-items:center;
-    justify-items:center;
+    
 }
 
 #avatarselection p {
-    /* font-family: 'Rotunda Veneta'; */
     font-family: "Pirata One";
     font-size: 50px;
     margin:0;
@@ -138,7 +155,7 @@ h2 {
 
 #startbutton {
     font-size:30px;
-    font-family:'Fraunces';
+    font-family: "IM Fell English";
     text-align:center;
 }
 
@@ -200,26 +217,22 @@ h2 {
 #shuffle {
     position:absolute;
     bottom:130px;
-    /* left:-90px; */
     left:-2.5%;
     font-size: 25px;
-    font-family:'Fraunces';
+    font-family: "IM Fell English";
 }
 
 #gameplay1 {
     color:#e0d5b1;
-    /* font-family: 'Rotunda Veneta'; */
     font-family: "Pirata One";
     font-size:40px;
 }
 
 h3 {
-    /* font-family: 'Rotunda Veneta'; */
     font-family: "Pirata One";
     font-size:64px;
     text-align:center;
     color: #4A3114;
-    margin-bottom:35px;
 }
 
 #gameplay1 h3 {
@@ -235,7 +248,7 @@ h3 {
 }
 
 #score-setup {
-    font-family:'Fraunces';
+    font-family: "IM Fell English";
     font-size:35px;
     display:flex;
     justify-content:space-between;
@@ -349,7 +362,7 @@ h3 {
     left:100px;
     bottom:103px;
     z-index: 2; 
-    transition:transform opacity 1s ease forwards;
+    transition:transform 1s ease forwards;
 }
 
 #playCard2War-A {
@@ -358,7 +371,7 @@ h3 {
     right:100px;
     bottom:103px;
     z-index: 2; 
-    transition:transform opacity 1s ease forwards;
+    transition:transform 1s ease forwards;
 }
 
 #playCard1War-B {
@@ -367,7 +380,7 @@ h3 {
     left:100px;
     bottom:103px;
     z-index: 3; 
-    transition:transform opacity 1s ease forwards;
+    transition:transform 1s ease forwards;
 }
 
 #playCard2War-B {
@@ -376,7 +389,7 @@ h3 {
     right:100px;
     bottom:103px;
     z-index: 3; 
-    transition:transform opacity 1s ease forwards;
+    transition:transform 1s ease forwards;
 }
 
 .move1 {
@@ -659,7 +672,8 @@ h3 {
 }
 
 #update-roundwin {
-    font-family: 'Fraunces';
+    /* font-family: 'Fraunces'; */
+    font-family: "IM Fell English";
     font-size:24px;
     color:#e0d5b1;
     position:absolute;

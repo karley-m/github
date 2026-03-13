@@ -3,7 +3,7 @@
     console.log('reading js');
 
     // ------- general consts ---------
-    const html = document.querySelector('html');
+    const body = document.querySelector('body');
     const sections = document.querySelectorAll('section');
     const header = document.querySelector('header');
     const h1 = document.querySelector('h1');
@@ -105,8 +105,10 @@
         event.preventDefault();
         sections[0].className = 'hidden';
         sections[1].className = 'show';
+        document.querySelector('#avatarpage').style.display = 'flex';
         header.style.display = 'none';
         avatarselection.style.display = "grid";
+        document.querySelector('footer').style.marginTop = '90px';
     });
 
     
@@ -169,10 +171,12 @@
 
             sections[1].className = 'hidden';
             sections[2].className = 'show';
+            document.querySelector('#avatarpage').style.display = 'none';
+            document.querySelector('footer').style.marginTop = '-30px';
             header.innerHTML = `<h1>Round ${gameData.round[1]}</h1>`;
             h1.style.fontSize = '65px';
             h1.style.color = "#e0d5b1";
-            html.style.backgroundImage = 'url(images/game-background.jpg)';
+            body.style.backgroundImage = 'url(images/game-background.jpg)';
         } else {
             alert('Arrrrr, please choose a character for both players.');
         }
@@ -589,10 +593,12 @@
     function resolveDoubleWar(winner) {
         if(winner === 1){
             gameData.score[0] += 100;
+            updateRoundWin.innerHTML = 'Player 1 won the double war!';
             moveCards1();
         } else {
             gameData.score[1] += 100;
             moveCards2();
+            updateRoundWin.innerHTML = 'Player 2 won the double war!';
         }
     
         gameData.warPile = [];

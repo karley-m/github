@@ -14,9 +14,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
-
 
 
     <!-- link to style -->
@@ -42,19 +42,18 @@
             <p>Instructions:
                 <ul>
                     <li>Grab two players and choose avatars.</li>
-                    <li>Shuffle the deck and split it in half.</li>
+                    <li>Shuffle the deck and split it in half (13 cards each).</li>
                     <li>For every round, click ‘Flip Card’ to flip the top cards for each player.</li>
-                    <li>The person with the highest card each round collects loot. </li>
-                    <li>If both players flip the same card, shout ‘war!’ and place another card down, and one face up. Whoever has the highest card collects double. </li>
-                    <li>Play until all cards are used up. Player with the most points win! (Points are determined by the value of the cards collected)</li>
+                    <li>The person with the highest card each round collects the sum of the cards flipped. </li>
+                    <li>If both players flip the same card, war happens! Click flip cards to see who wins.</li>
+                    <li>Play until all cards are used up in the 13 rounds. Player with the most points win!</li>
                 </ul>
             </p>
             <button id="gotoavatar">Okay!</button>
-            <p><a href="https://www.wikihow.com/Play-War-(Card-Game)">I'm still confused</a></p>
         </section>
 
         <!-- section 01 -->
-        <section class="hidden">
+        <section id="avatarpage" class="hidden">
             <h3>Choose your avatar:</h3>
             <div id="avatarselection" >
                 <p>Player 1</p>
@@ -169,8 +168,9 @@
 
     </main>
 
-    <footer>
+    <footer class="hidden">
         <p><a href="audio/soundsources.pdf" target="_blank" rel="noopener noreferrer">Sound Sources</a></p>
+        <p>Coded by Karley</p>
     </footer>
     
 </body>
