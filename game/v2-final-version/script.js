@@ -188,7 +188,7 @@
             sections[2].className = 'show';
             document.querySelector('#avatarpage').style.display = 'none';
             document.querySelector('footer').className = '';
-            header.innerHTML = `<h1>Round ${gameData.round[1]} / 13</h1>`;
+            header.innerHTML = `<h1>Round ${gameData.round} / 13</h1>`;
             h1.style.fontSize = '65px';
             h1.style.color = "#e0d5b1";
             body.style.backgroundImage = 'url(images/game-background.jpg)';
@@ -348,7 +348,7 @@
         setTimeout(function(){
             // if player 1's card is higher
             if (card1.value > card2.value) {
-                console.log('player 1 won this round with points!');
+                console.log('Player 1 won this round with points!');
                 setTimeout(function(){
                     moveCards1();
                 }, 1500);
@@ -363,7 +363,7 @@
 
             // if player 2's card is higher
             if (card1.value < card2.value) {
-                console.log('player 2 won this round with points!');
+                console.log('Player 2 won this round with points!');
                 setTimeout(function(){
                     moveCards2();
                 }, 1500);
@@ -383,9 +383,16 @@
 
                 document.querySelector('#candleflame').classList.remove('hidden');
 
-                gameData.war = true;
-
                 gameData.warPile.push(card1, card2);
+
+                if(gameData.player1Deck.length === 0 || gameData.player2Deck.length === 0){
+                    console.log("War cannot continue. Ending game.");
+                    checkGameEnd();
+                    flipButton.style.display = "none";
+                    return;
+                }
+
+                gameData.war = true;
 
                 updateRoundWin.innerHTML = "<p>War! Flip again!</p>";
             }
@@ -490,6 +497,7 @@
     // ------------- if war is triggered --------------
     function handleWar(){
 
+
         if(gameData.player1Deck.length < 2 && gameData.score[1] > gameData.score[0]) {
             checkGameEnd();
             flipButton.style.display = 'none';
@@ -501,6 +509,13 @@
             flipButton.style.display = 'none';
             return;
         };
+
+        if(gameData.player1Deck.length < 2 || gameData.player2Deck.length < 2){
+            console.log("Not enough cards for war. Ending game.");
+            flipButton.style.display = 'none';
+            checkGameEnd();
+            return;
+        }
 
         const down1 = gameData.player1Deck.shift();
         const down2 = gameData.player2Deck.shift();
@@ -580,14 +595,14 @@
         if(up1.value > up2.value){
             moveCards1();
             gameData.score[0] += sum;
-            updateRoundWin.innerHTML = "<p>player 1 wins the war!</p>";
+            updateRoundWin.innerHTML = "<p>Player 1 wins the war!</p>";
             checkTreasure(1);
             document.querySelector('#candleflame').classList.remove('hidden');
             
         } else if (up1.value < up2.value) {
             moveCards2();
             gameData.score[1] += sum;
-            updateRoundWin.innerHTML = '<p>player 2 wins the war!</p>';
+            updateRoundWin.innerHTML = '<p>Player 2 wins the war!</p>';
             checkTreasure(2);
             document.querySelector('#candleflame').classList.remove('hidden');
             

@@ -39,7 +39,8 @@ button:hover {
 
 footer {
     font-family: "IM Fell English";
-    padding-left:10px;
+    left:50%;
+    transform: translateX(-50%);
     position:absolute;
     font-size:10px;
     display:flex;
@@ -456,7 +457,7 @@ h3 {
 #front2 {
     position:absolute;
     right:350px;
-    bottom:315px;
+    bottom:315px; 
     transform: rotateY(-180deg);
     transition: transform 1s ease;
 }
@@ -464,7 +465,7 @@ h3 {
 #front2A {
     position:absolute;
     right:250px;
-    bottom:330px;
+    bottom:315px;
     transform: rotateY(-180deg);
     transition: transform 1s ease;
 }
@@ -472,7 +473,7 @@ h3 {
 #front2B {
     position:absolute;
     right:150px;
-    bottom:333px;
+    bottom:315px;
     transform: rotateY(-180deg);
     transition: transform 1s ease;
 }
@@ -597,13 +598,13 @@ h3 {
 
 @keyframes backCardFlip2A {
     0% {
-        transform: translateX(-150px) translateY(-220px) rotateY(0deg);
+        transform: translateX(-150px) translateY(-230px) rotateY(0deg);
         opacity:1;
     } 99% {
-        transform: translateX(-150px) translateY(-220px) rotateY(180deg);
+        transform: translateX(-150px) translateY(-230px) rotateY(180deg);
         opacity:0;
     } 100% {
-        transform: translateX(-150px) translateY(-220px) rotateY(180deg);
+        transform: translateX(-150px) translateY(-230px) rotateY(180deg);
         opacity:0;
     }
 }
