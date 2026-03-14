@@ -47,19 +47,12 @@
     const score2 = document.querySelector('#score2');
 
     // ----------- treasure pictures --------------
-    const treasures = [
-        document.querySelector('#treasure1'),
-        document.querySelector('#treasure2'),
-        document.querySelector('#treasure3'),
-        document.querySelector('#treasure4')
-    ];
-    
-    const milestonePoints = [20, 40, 60, 80];
-    
-    let playerMilestones = [
-        [], // player 1
-        []  // player 2
-    ];
+    const treasureDiv = document.querySelector('#treasures');
+
+    let p1Milestones = [];
+    let p2Milestones = [];
+
+    const milestones = [20, 40, 60, 80];
 
     // ------------ sounds -----------
     const shuffleSound = new Audio('audio/shuffle.mp3');
@@ -582,11 +575,13 @@
             moveCards1();
             gameData.score[0] += sum;
             updateRoundWin.innerHTML = "<p>player 1 wins the war!</p>";
+            checkTreasure(1);
             
         } else if (up1.value < up2.value) {
             moveCards2();
             gameData.score[1] += sum;
             updateRoundWin.innerHTML = '<p>player 2 wins the war!</p>';
+            checkTreasure(2);
             
         } else {
             document.querySelector('#double-war-overlay').className = 'show';
@@ -607,6 +602,7 @@
         flipButton.disabled = false;
 
         checkGameEnd();
+        
     }
 
     function resolveDoubleWar(winner) {
@@ -614,10 +610,12 @@
             gameData.score[0] += 100;
             updateRoundWin.innerHTML = '<p>Player 1 won the double war!</p>';
             moveCards1();
+            checkTreasure(1);
         } else {
             gameData.score[1] += 100;
             moveCards2();
             updateRoundWin.innerHTML = '<p>Player 2 won the double war!</p>';
+            checkTreasure(2);
         }
     
         gameData.warPile = [];
@@ -656,36 +654,36 @@
     }
 
     // ---------- checking for points milestones ------------
+    function showTreasure(player, index) {
+        
+        const treasureId = `treasure${index + 1}${player === 1 ? 'a' : 'b'}`;
+        const treasureEl = document.querySelector(`#${treasureId}`);
+        if (treasureEl) {
+            treasureEl.classList.remove('hidden'); // remove the hidden class
+        }
+    }
+
     function checkTreasure(player) {
         const score = gameData.score[player - 1];
     
-        for (let i = 0; i < milestonePoints.length; i++) {
+        for (let i = 0; i < milestones.length; i++) {
+            const milestoneIndex = i + 1; // For IDs
+            const milestoneId = `#treasure${milestoneIndex}${player === 1 ? 'a' : 'b'}`;
+            const treasureImg = document.querySelector(milestoneId);
     
-            const milestone = milestonePoints[i];
-    
-            if (score >= milestone && playerMilestones[player - 1].indexOf(i) === -1) {
-    
-                showTreasure(player, i);
-                playerMilestones[player - 1].push(i);
+            if (score >= milestones[i]) {
+                if (player === 1 && p1Milestones.indexOf(i) === -1) {
+                    if (treasureImg) treasureImg.classList.remove("hidden");
+                    p1Milestones.push(i);
+                } 
+                if (player === 2 && p2Milestones.indexOf(i) === -1) {
+                    if (treasureImg) treasureImg.classList.remove("hidden");
+                    p2Milestones.push(i);
+                }
             }
         }
     }
-
-    function showTreasure(player, index) {
-
-        const treasure = treasures[index];
     
-        if (player === 1) {
-            treasure.style.left = "50px";
-        } else {
-            treasure.style.right = "50px";
-        }
-
-        treasure.style.top = (120 + index * 120) + "px";
-    
-        treasure.style.top = "100px";
-        treasure.classList.remove("hidden");
-    }
 
     // ------------- checking which cards in are each array each game ------------
     console.log("P1 deck:", gameData.player1Deck.length);

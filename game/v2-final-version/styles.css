@@ -268,6 +268,7 @@ h3 {
     left:43.2%;
     top:75px;
     transition: transform 0.6s ease;
+    z-index:1;
 }
 
 .deck {
@@ -313,6 +314,7 @@ h3 {
 
 #playcards {
     position:relative;
+    z-index:1;
 }
 
 
@@ -664,32 +666,54 @@ h3 {
 
 #treasures {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     pointer-events: none;
     z-index: 0;
+    opacity:0.6;
 }
 
 #treasures img {
-    opacity: 0.85;
+    width:200px;
+    position:absolute;
+    z-index:0;
 }
 
-#treasure1 {
-    position:absolute;
+#treasure1a {
+    top:-170px;
 }
 
-#treasure2 {
-    position:absolute;
+#treasure2a {
+    top:-140px;
+    left:230px;
 }
 
-#treasure3 {
-    position:absolute;
+#treasure3a {
+    top:-240px;
+    left:180px;
 }
 
-#treasure4 {
-    position:absolute;
+#treasure4a {
+    top:-290px;
+    left:0px;
+}
+
+#treasure1b {
+    top:-170px;
+    left:990px
+}
+
+#treasure2b {
+    top:-270px;
+    left:990px
+}
+
+#treasure3b {
+    top:-270px;
+    left:860px
+}
+
+#treasure4b {
+    top:-180px;
+    left:850px
 }
 
 #double-war-overlay, #winner {
