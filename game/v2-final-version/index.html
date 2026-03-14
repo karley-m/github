@@ -30,7 +30,7 @@
     <header>
         <div>
             <h1>War!</h1>
-            <img src="images/map.png" width="100">
+            <img src="images/map.png" width="100" alt="a map texture background">
         </div>
         <h2>Arrrr Matey, ready for a game of war?</h2>
     </header>
@@ -39,7 +39,7 @@
 
         <!-- section 0 -->
         <section id="startpage">
-            <p>Instructions:
+            <p>Instructions:</p>
                 <ul>
                     <li>Grab two players and choose avatars.</li>
                     <li>Shuffle the deck and split it in half (13 cards each).</li>
@@ -48,7 +48,7 @@
                     <li>If both players flip the same card, war happens! Click flip cards to see who wins.</li>
                     <li>Play until all cards are used up in the 13 rounds. Player with the most points win!</li>
                 </ul>
-            </p>
+            
             <button id="gotoavatar">Okay!</button>
         </section>
 
@@ -88,14 +88,14 @@
             <h3 id="round-count">Round 0 / 13</h3>
             
             <div class="deck" id="deck-container">
-                <img class="card" id="card1" src="images/card.png">
-                <img class="card" id="card2" src="images/card.png">
-                <img class="card" id="card3" src="images/card.png">
-                <img class="card" id="card4" src="images/card.png">
-                <img class="card" id="card5" src="images/card.png">
-                <img class="card" id="card6" src="images/card.png">
-                <img class="card" id="card7" src="images/card.png">
-                <img class="card" id="card8" src="images/card.png">
+                <img class="card" id="card1" src="images/card.png" alt="a pirate card face down">
+                <img class="card" id="card2" src="images/card.png" alt="a pirate card face down">
+                <img class="card" id="card3" src="images/card.png" alt="a pirate card face down">
+                <img class="card" id="card4" src="images/card.png" alt="a pirate card face down">
+                <img class="card" id="card5" src="images/card.png" alt="a pirate card face down">
+                <img class="card" id="card6" src="images/card.png" alt="a pirate card face down">
+                <img class="card" id="card7" src="images/card.png" alt="a pirate card face down">
+                <img class="card" id="card8" src="images/card.png" alt="a pirate card face down">
             </div>
 
             <button id="shuffle">Shuffle and Split Cards</button>
@@ -121,24 +121,24 @@
             <div id="goldcoins" class="hidden"></div>
 
             <div id="playingcards">
-                <img class="card" id="playcard1" src="images/card.png">
-                <img class="card" id="playcard2" src="images/card.png">
-                <img class="card" id="playCard1War-A" src="images/card.png">
-                <img class="card" id="playCard2War-A" src="images/card.png">
-                <img class="card" id="playCard1War-B" src="images/card.png">
-                <img class="card" id="playCard2War-B" src="images/card.png">
+                <img class="card" id="playcard1" src="images/card.png" alt="a pirate card face down">
+                <img class="card" id="playcard2" src="images/card.png" alt="a pirate card face down">
+                <img class="card" id="playCard1War-A" src="images/card.png" alt="a pirate card face down">
+                <img class="card" id="playCard2War-A" src="images/card.png" alt="a pirate card face down">
+                <img class="card" id="playCard1War-B" src="images/card.png" alt="a pirate card face down">
+                <img class="card" id="playCard2War-B" src="images/card.png" alt="a pirate card face down">
             </div>
 
             <div id="treasures">
-                <img id="treasure1a" class="hidden" src="images/treasure1.png" width="200">
-                <img id="treasure2a" class="hidden" src="images/treasure2.png" width="200">
-                <img id="treasure3a" class="hidden" src="images/treasure3.png" width="200">
-                <img id="treasure4a" class="hidden" src="images/treasure4.png" width="200">
+                <img id="treasure1a" class="hidden" src="images/treasure1.png" width="200" alt="some gold treasure">
+                <img id="treasure2a" class="hidden" src="images/treasure2.png" width="200" alt="some gold treasure">
+                <img id="treasure3a" class="hidden" src="images/treasure3.png" width="200" alt="some gold treasure">
+                <img id="treasure4a" class="hidden" src="images/treasure4.png" width="200" alt="some gold treasure">
 
-                <img id="treasure1b" class="hidden" src="images/treasure1.png" width="200">
-                <img id="treasure2b" class="hidden" src="images/treasure2.png" width="200">
-                <img id="treasure3b" class="hidden" src="images/treasure3.png" width="200">
-                <img id="treasure4b" class="hidden" src="images/treasure4.png" width="200">
+                <img id="treasure1b" class="hidden" src="images/treasure1.png" width="200" alt="some gold treasure">
+                <img id="treasure2b" class="hidden" src="images/treasure2.png" width="200" alt="some gold treasure">
+                <img id="treasure3b" class="hidden" src="images/treasure3.png" width="200" alt="some gold treasure">
+                <img id="treasure4b" class="hidden" src="images/treasure4.png" width="200" alt="some gold treasure">
             </div>
 
             <div id="front1"></div>
@@ -163,7 +163,7 @@
         <section id="winner" class="hidden">
             <div id="winner-content">
                 <h2>Player 1 Wins!</h2>
-                <img id="winner-avatar" width="150">
+                <img id="winner-avatar" src="#" width="150" alt="the winner's chosen avatar">
                 <p>Score: 42</p>
                 <button id="restart-game">New Game</button>
             </div>

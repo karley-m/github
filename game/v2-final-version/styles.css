@@ -340,7 +340,7 @@ h3 {
     left:100px;
     bottom:95px;
     z-index: 2; 
-    transition:transform 1s ease forwards;
+    transition:transform 1s ease;
 }
 
 #playCard2War-A {
@@ -349,7 +349,7 @@ h3 {
     right:100px;
     bottom:95px;
     z-index: 2; 
-    transition:transform 1s ease forwards;
+    transition:transform 1s ease;
 }
 
 #playCard1War-B {
@@ -358,7 +358,7 @@ h3 {
     left:100px;
     bottom:95px;
     z-index: 3; 
-    transition:transform 1s ease forwards;
+    transition:transform 1s ease;
 }
 
 #playCard2War-B {
@@ -367,7 +367,7 @@ h3 {
     right:100px;
     bottom:95px;
     z-index: 3; 
-    transition:transform 1s ease forwards;
+    transition:transform 1s ease;
 }
 
 .move1 {
