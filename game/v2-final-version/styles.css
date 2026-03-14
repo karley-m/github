@@ -39,10 +39,15 @@ button:hover {
 
 footer {
     font-family: "IM Fell English";
-    /* padding-top:50px; */
-    margin-top:-30px;
     padding-left:10px;
     position:absolute;
+    font-size:10px;
+    display:flex;
+    gap:30px;
+}
+
+footer p {
+    color:#e0d5b1;
 }
 
 footer a {
@@ -273,6 +278,16 @@ h3 {
 
 .deck {
     position:relative;
+}
+
+#audiocontrol {
+    position:absolute;
+    top:40px;
+    right:20px;
+}
+
+#audiocontrol:hover {
+    cursor:pointer;
 }
 
 
@@ -714,6 +729,14 @@ h3 {
 #treasure4b {
     top:-180px;
     left:850px
+}
+
+#candleflame {
+    position:absolute;
+    top:10px;
+    left:155px;
+    opacity:0.7;
+    filter: drop-shadow(0 0 10px orange);
 }
 
 #double-war-overlay, #winner {

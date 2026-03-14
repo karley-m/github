@@ -46,9 +46,7 @@
     const score1 = document.querySelector('#score1');
     const score2 = document.querySelector('#score2');
 
-    // ----------- treasure pictures --------------
-    const treasureDiv = document.querySelector('#treasures');
-
+    // ----------- treasure updates --------------
     let p1Milestones = [];
     let p2Milestones = [];
 
@@ -58,6 +56,9 @@
     const shuffleSound = new Audio('audio/shuffle.mp3');
     const cardSound = new Audio('audio/card.mp3');
     const warBell = new Audio('audio/warbell.mp3');
+    const backgroundMusic = new Audio('audio/background-music.mp3');
+    const audioControl = document.querySelector('#audiocontrol');
+    const audio = document.querySelector('#audio');
 
 
     
@@ -119,7 +120,6 @@
         document.querySelector('#avatarpage').style.display = 'flex';
         header.style.display = 'none';
         avatarselection.style.display = "grid";
-        document.querySelector('footer').style.marginTop = '90px';
     });
 
     
@@ -180,10 +180,14 @@
             gameData.player1Avatar = gameData.avatars[currentAvatar1];
             gameData.player2Avatar = gameData.avatars[currentAvatar2];
 
+            backgroundMusic.play();
+            backgroundMusic.loop = true;
+            playPause();
+
             sections[1].className = 'hidden';
             sections[2].className = 'show';
             document.querySelector('#avatarpage').style.display = 'none';
-            document.querySelector('footer').style.marginTop = '-30px';
+            document.querySelector('footer').className = '';
             header.innerHTML = `<h1>Round ${gameData.round[1]} / 13</h1>`;
             h1.style.fontSize = '65px';
             h1.style.color = "#e0d5b1";
@@ -376,6 +380,8 @@
             if (card1.value === card2.value) {
                 console.log('war!!!!');
                 warBell.play();
+
+                document.querySelector('#candleflame').classList.remove('hidden');
 
                 gameData.war = true;
 
@@ -576,12 +582,14 @@
             gameData.score[0] += sum;
             updateRoundWin.innerHTML = "<p>player 1 wins the war!</p>";
             checkTreasure(1);
+            document.querySelector('#candleflame').classList.remove('hidden');
             
         } else if (up1.value < up2.value) {
             moveCards2();
             gameData.score[1] += sum;
             updateRoundWin.innerHTML = '<p>player 2 wins the war!</p>';
             checkTreasure(2);
+            document.querySelector('#candleflame').classList.remove('hidden');
             
         } else {
             document.querySelector('#double-war-overlay').className = 'show';
@@ -682,6 +690,19 @@
                 }
             }
         }
+    }
+
+    // --------------- background music control ----------------
+    function playPause(){
+        audio.addEventListener('mousedown', function(){
+            if(!backgroundMusic.paused){
+                backgroundMusic.pause();
+                audio.src='images/soundoff.png';
+            } else {
+                backgroundMusic.play();
+                audio.src='images/soundon.png';
+            }
+        })
     }
     
 
